@@ -1,3 +1,5 @@
+#chunking
+
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 def split_documents(documents):
