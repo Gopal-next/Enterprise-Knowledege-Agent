@@ -1,9 +1,32 @@
-from langchain_community.document_loaders import PyPDFLoader
+from pathlib import Path
 
-def load_pdf(pdf_path):
+from langchain_community.document_loaders import (
+    PyPDFLoader,
+    TextLoader,
+    CSVLoader,
+    Docx2txtLoader,
+)
 
-    loader = PyPDFLoader(pdf_path)
+LOADERS = {
+    ".pdf": PyPDFLoader,
+    ".txt": TextLoader,
+    ".csv": CSVLoader,
+    ".docx": Docx2txtLoader,
+}
 
-    documents = loader.load()
 
-    return documents
+def load_document(file_path: str):
+    ext = Path(file_path).suffix.lower()
+
+    loader_class = LOADERS.get(ext)
+    if not loader_class:
+        raise ValueError(f"Unsupported file type: {ext}")
+
+    try:
+        loader = loader_class(file_path)
+        return loader.load()
+
+    except Exception as e:
+        raise RuntimeError(
+            f"Failed to load '{file_path}': {e}"
+        ) from e

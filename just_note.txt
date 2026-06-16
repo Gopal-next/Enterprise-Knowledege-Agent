@@ -1,0 +1,28 @@
+docs = retriever.invoke(question)
+
+for i, doc in enumerate(docs):
+    print(f"\nChunk {i+1}")
+    print(doc.page_content)
+
+
+
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_community.utilities import SQLDatabase
+
+llm = ChatGoogleGenerativeAI(
+    model="gemini-2.5-flash"
+)
+
+db = SQLDatabase.from_uri(
+    "sqlite:///data/company.db"
+)
+
+
+
+with open("D:\\Rag__.txt", "r", encoding="utf-8") as f:
+    text = f.read()
+
+output = " ".join(text.split())
+
+with open("D:\\output_rag.txt", "w", encoding="utf-8") as f:
+    f.write(output)
