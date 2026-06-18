@@ -9,8 +9,9 @@ from app.rag.vectorstore import create_vectorstore
 from app.rag.search import search_documents
 
 docs = load_pdf(
-    "D:\Enterprise knowledge agent\data\pdfs\leave_policy.pdf"
+    "D:\Enterprise knowledge agent\Data\pdfs\leave_policy.pdf"
 )
+
 
 chunks = split_documents(docs)
 

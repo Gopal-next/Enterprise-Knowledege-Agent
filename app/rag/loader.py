@@ -15,7 +15,7 @@ LOADERS = {
 }
 
 
-def load_document(file_path: str):
+def load_pdf(file_path: str):
     ext = Path(file_path).suffix.lower()
 
     loader_class = LOADERS.get(ext)

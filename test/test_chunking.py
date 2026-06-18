@@ -6,7 +6,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from app.rag.loader import load_pdf
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-docs = load_pdf("D:\Enterprise knowledge agent\data\pdfs\employee_handbook.pdf")
+docs = load_pdf("D:\Enterprise knowledge agent\Data\pdfs\employee_handbook.pdf")
 
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=100,
