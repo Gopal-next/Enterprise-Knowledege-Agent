@@ -37,7 +37,10 @@
 import streamlit as st
 import os
 from rag.retriever import retriever_qa
-
+# from service.rag_service import answer_question
+# from rag.vectorstore import create_vectorstore
+# from service.sql_service import ask_database
+import time
 
 st.set_page_config(
     page_title="Enterprise Knowledge Agent",
@@ -55,7 +58,34 @@ menu = st.sidebar.selectbox(
     ]
 )
 
+if "questions_count" not in st.session_state:
+    st.session_state.questions_count = 0
 
+if "pdf_queries" not in st.session_state:
+    st.session_state.pdf_queries = 0
+
+if "db_queries" not in st.session_state:
+    st.session_state.db_queries = 0
+
+if "total_response_time" not in st.session_state:
+    st.session_state.total_response_time = 0
+
+if "questions_count" not in st.session_state:
+    st.session_state.questions_count = 0
+
+
+pdf_count = len(
+    [f for f in os.listdir("data/pdfs")
+     if f.endswith(".pdf")]
+)
+
+if st.session_state.questions_count > 0:
+        avg_time = (
+            st.session_state.total_response_time /
+            st.session_state.questions_count
+        )
+else:
+    avg_time = 0
 if menu == "Chat Assistant":
 
     st.header("Chat Assistant")
@@ -63,16 +93,44 @@ if menu == "Chat Assistant":
     question = st.text_input(
         "Ask a Question"
     )
+    source = st.radio(
+        "Choose Source",[
+            "PDF",
+            "Database"
+        ]
+    )
 
+    
     if st.button("Ask"):
+        st.session_state.questions_count += 1
 
-        with st.spinner("Searching documents and generating answer..."):
+        if source == "PDF":
+            st.session_state.pdf_queries += 1
+        else:
+            st.session_state.db_queries += 1
 
+        with st.spinner("Thinking..."):
+            # if source == "pdf":
+            start_time = time.time()
             answer = retriever_qa(question)
+            # else:
+            #     answer= ask_database(question)
+            
 
+            # if source == "PDF":
+                # answer = retriever_qa(question)
+            # else:
+                # answer = ask_database(question)
+
+            end_time = time.time()
+
+            response_time = end_time - start_time
+
+            st.session_state.total_response_time += response_time
+            st.session_state.questions_count += 1
         st.success(answer)
 
-        st.write("Tool Used: PDF Retriever")
+        st.write(f"Tool Used: {source} retriever")
 
 elif menu == "Upload PDF":
 
@@ -106,24 +164,41 @@ elif menu == "Analytics":
 
     st.header("Analytics Dashboard")
 
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3 , col4= st.columns(4)
 
     with col1:
         st.metric(
             "Documents",
-            2
+            pdf_count
         )
 
     with col2:
         st.metric(
             "Questions",
-            45
+            st.session_state.questions_count
         )
 
     with col3:
         st.metric(
-            "Response Time",
-            "1.5 sec"
+            "PDF Queries",
+            st.session_state.pdf_queries
         )
+    with col4:
+        st.metric(
+            "Database Queries",
+            st.session_state.db_queries
+        )
+    
+    st.metric(
+        "Average Search Time",
+        f"{avg_time:.2f} sec"
+    )
+    if st.session_state.pdf_queries > st.session_state.db_queries:
+        most_used = "PDF Retriever"
+    else:
+        most_used = "SQL Database"
 
-    st.write("Most Used Tool: PDF Retriever")
+    st.write(f"Most Used Tool: {most_used}")
+
+    
+    # check core folder

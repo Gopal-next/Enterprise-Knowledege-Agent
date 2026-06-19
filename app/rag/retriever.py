@@ -1,5 +1,4 @@
 import os
-
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_classic.chains import create_retrieval_chain
 from langchain_classic.chains.combine_documents import create_stuff_documents_chain
@@ -8,6 +7,9 @@ from langchain_core.prompts import ChatPromptTemplate
 from rag.loader import load_pdf
 from rag.splitter import split_documents
 from rag.vectorstore import create_vectorstore
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def retriever_qa(query):

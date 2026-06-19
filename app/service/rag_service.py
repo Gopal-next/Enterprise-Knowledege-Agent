@@ -1,5 +1,25 @@
-from app.core.llm import get_llm
-from app.core.prompts import RAG_PROMPT
+from langchain_google_genai import ChatGoogleGenerativeAI
+from dotenv import load_dotenv
+
+load_dotenv()
+
+RAG_PROMPT = """
+You are an enterprise assistant.
+
+Use only the provided context.
+
+If answer is not present,
+say:
+'I could not find that information in the documents.'
+
+Context:
+{context}
+
+Question:
+{question}
+
+Answer:
+"""
 
 def answer_question(question, retriever):
 
@@ -15,7 +35,9 @@ def answer_question(question, retriever):
         question=question
     )
 
-    llm = get_llm()
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-2.5-flash"
+    )
 
     response = llm.invoke(prompt)
 

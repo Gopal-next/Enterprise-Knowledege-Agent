@@ -1,18 +1,9 @@
 from langchain_community.utilities import SQLDatabase
 
-db = SQLDatabase.from_uri(
-    "sqlite:///data/company.db"
-)
+def get_database():
 
-print(db.get_table_info())
+    db = SQLDatabase.from_uri(
+        "sqlite:///D:/Enterprise knowledge agent/app/data/company.db"
+    )
 
-
-# from langchain_community.utilities import SQLDatabase
-
-# def get_database():
-
-#     db = SQLDatabase.from_uri(
-#         "sqlite:///data/company.db"
-#     )
-
-#     return db
+    return db
