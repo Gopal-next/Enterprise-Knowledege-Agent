@@ -40,15 +40,14 @@ def answer_question(question, retriever):
     )
 
     response = llm.invoke(prompt)
+    for doc in docs:
+        print(doc.metadata)
+
+    for doc in docs:
+        print(
+            f"Page: {doc.metadata.get('page')}"
+        )
 
     return response.content
 
-# docs = retriever.invoke(question)
-
-# for doc in docs:
-#     print(doc.metadata)
-
-# for doc in docs:
-#     print(
-#         f"Page: {doc.metadata.get('page')}"
-#     )
+    
