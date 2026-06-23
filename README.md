@@ -23,9 +23,9 @@ Enterprise Knowledge Agent is an AI-powered assistant that answers questions usi
 - Python
 - LangChain
 - ChromaDB
-- SQLite / PostgreSQL
+- SQLite
 - Streamlit
-- Gemini / OpenAI
+- Gemini
 - Pandas
 
 ---
