@@ -1,6 +1,8 @@
+
+import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_classic.chains import create_sql_query_chain
-from app.database.sql_tool import get_database
+from database.sql_tool import get_database
 from dotenv import load_dotenv
 from langchain_community.tools.sql_database.tool import QuerySQLDatabaseTool
 from langchain_core.prompts import PromptTemplate
@@ -28,11 +30,14 @@ load_dotenv()
 #         {input}
 #     """
 # )
+# sql_service.py
+
+import re
 
 
 def ask_database(question):
 
-    db = get_database()
+    db, db_path = get_database()
 
     llm = ChatGoogleGenerativeAI(
         model="gemini-2.5-flash"
@@ -47,13 +52,32 @@ def ask_database(question):
         {"question": question}
     )
 
-    executor = QuerySQLDatabaseTool(db=db)
+    # ADD REGEX HERE
+    sql_query = re.sub(
+        r"```(?:sql|sqlite)?",
+        "",
+        sql_query
+    )
 
-    sql_query = sql_query
+    sql_query = sql_query.strip()
 
     if "SQLQuery:" in sql_query:
-        sql_query = sql_query.split("SQLQuery:")[-1].strip()
+        sql_query = sql_query.split(
+            "SQLQuery:"
+        )[-1].strip()
 
-    result = executor.invoke(sql_query)
+    print("Generated SQL:")
+    print(sql_query)
 
-    return result
+    executor = QuerySQLDatabaseTool(
+        db=db
+    )
+
+    result = executor.invoke(
+        sql_query
+    )
+
+    return {
+        "sql_query": sql_query,
+        "result": result
+    }

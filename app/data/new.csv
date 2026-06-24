@@ -1,0 +1,21 @@
+Employee_ID,Name,Age,Department,Experience_Years,Salary,Location,Joining_Date,Performance_Rating,Employment_Type
+E001,Aarav Sharma,25,Engineering,2,55000,Bangalore,2023-05-15,4.2,Full-Time
+E002,Priya Verma,32,HR,8,78000,Delhi,2018-07-20,4.5,Full-Time
+E003,Rohan Gupta,29,Marketing,5,65000,Mumbai,2020-03-10,4.0,Full-Time
+E004,Neha Singh,27,Finance,3,60000,Hyderabad,2022-01-12,3.8,Full-Time
+E005,Vikram Patel,35,Engineering,10,110000,Pune,2016-09-05,4.7,Full-Time
+E006,Ananya Rao,24,Sales,1,45000,Chennai,2024-02-01,3.9,Contract
+E007,Karan Mehta,40,Operations,15,130000,Gurgaon,2011-11-18,4.8,Full-Time
+E008,Sneha Kapoor,31,Engineering,7,90000,Bangalore,2019-06-25,4.4,Full-Time
+E009,Arjun Nair,28,Support,4,58000,Kochi,2021-08-30,3.7,Full-Time
+E010,Meera Joshi,26,Marketing,2,52000,Ahmedabad,2023-04-17,4.1,Part-Time
+E011,Raj Malhotra,37,Finance,12,120000,Delhi,2014-12-10,4.6,Full-Time
+E012,Pooja Desai,30,HR,6,72000,Mumbai,2019-09-15,4.3,Full-Time
+E013,Aditya Kumar,23,Engineering,1,50000,Noida,2024-01-20,3.6,Intern
+E014,Kavya Iyer,34,Sales,9,95000,Chennai,2017-05-08,4.5,Full-Time
+E015,Rahul Saxena,29,Operations,5,70000,Jaipur,2020-10-12,4.0,Full-Time
+E016,Isha Bansal,27,Support,3,56000,Delhi,2022-06-18,3.9,Contract
+E017,Manish Yadav,42,Engineering,18,150000,Pune,2008-03-22,4.9,Full-Time
+E018,Ritika Jain,33,Finance,8,85000,Indore,2018-11-05,4.4,Full-Time
+E019,Siddharth Roy,26,Marketing,2,53000,Kolkata,2023-07-10,3.8,Part-Time
+E020,Tanya Arora,36,HR,11,105000,Gurgaon,2015-02-28,4.7,Full-Time

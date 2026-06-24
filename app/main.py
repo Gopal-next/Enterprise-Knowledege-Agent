@@ -1,39 +1,3 @@
-# from fastapi import FastAPI
-
-# from api.upload import router as upload_router
-
-# app = FastAPI(title="Enterprise Knowledge Agent")
-
-# app.include_router(upload_router)
-
-# @app.get("/")
-# def home():
-#     return {
-#         "message": "Enterprise Knowledge Agent Running"
-#     }
-
-
-# from fastapi import FastAPI
-
-# app = FastAPI(
-#     title="Enterprise Knowledge Agent"
-# )
-
-# @app.get("/")
-# def home():
-#     return {
-#         "message": "API Running"
-#     }
-
-
-# from app.api.routes.health import router as health_router
-
-# app.include_router(
-#     health_router
-# )
-
-
-
 import streamlit as st
 import os
 from rag.retriever import retriever_qa
@@ -41,6 +5,7 @@ from rag.retriever import retriever_qa
 # from rag.vectorstore import create_vectorstore
 # from service.sql_service import ask_database
 import time
+from service.sql_service import ask_database
 
 st.set_page_config(
     page_title="Enterprise Knowledge Agent",
@@ -70,8 +35,9 @@ if "db_queries" not in st.session_state:
 if "total_response_time" not in st.session_state:
     st.session_state.total_response_time = 0
 
-if "questions_count" not in st.session_state:
-    st.session_state.questions_count = 0
+
+if "messages" not in st.session_state:
+    st.session_state.messages = []
 
 
 pdf_count = len(
@@ -90,18 +56,23 @@ if menu == "Chat Assistant":
 
     st.header("Chat Assistant")
 
-    question = st.text_input(
-        "Ask a Question"
-    )
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+
     source = st.radio(
-        "Choose Source",[
-            "PDF",
-            "Database"
-        ]
+        "Choose Source",
+        ["PDF", "Database"]
     )
 
-    
-    if st.button("Ask"):
+    # Display old messages
+    for msg in st.session_state.messages:
+        with st.chat_message(msg["role"]):
+            st.write(msg["content"])
+
+    question = st.chat_input("Ask a Question")
+
+    if question:
+
         st.session_state.questions_count += 1
 
         if source == "PDF":
@@ -109,55 +80,86 @@ if menu == "Chat Assistant":
         else:
             st.session_state.db_queries += 1
 
-        with st.spinner("Thinking..."):
-            # if source == "pdf":
-            start_time = time.time()
-            answer = retriever_qa(question)
-            # else:
-            #     answer= ask_database(question)
-            
+        st.session_state.messages.append(
+            {
+                "role": "user",
+                "content": question
+            }
+        )
 
-            # if source == "PDF":
-                # answer = retriever_qa(question)
-            # else:
-                # answer = ask_database(question)
+        with st.chat_message("user"):
+            st.write(question)
+
+        with st.spinner("Thinking..."):
+
+            start_time = time.time()
+
+            if source == "PDF":
+                answer = retriever_qa(question)
+            else:
+                answer = ask_database(question)
 
             end_time = time.time()
 
             response_time = end_time - start_time
 
             st.session_state.total_response_time += response_time
-            st.session_state.questions_count += 1
-        st.success(answer)
 
+        st.session_state.messages.append(
+            {
+                "role": "assistant",
+                "content": answer
+            }
+        )
+
+        with st.chat_message("assistant"):
+            st.write(answer)
+
+        st.caption(f"Tool Used: {source}")
         st.write(f"Tool Used: {source} retriever")
 
-elif menu == "Upload PDF":
+elif menu == "Upload File":
 
-    st.header("Upload PDF")
+    st.header("Upload PDF / Excel / CSV")
 
     uploaded_file = st.file_uploader(
-        "Choose PDF",
-        type=["pdf"]
+        "Choose File",
+        type=["pdf", "xlsx", "xls", "csv"]
     )
 
     if uploaded_file:
 
+        file_extension = uploaded_file.name.split(".")[-1].lower()
+
+        if file_extension == "pdf":
+
+            save_folder = "data/pdfs"
+
+        else:
+
+            save_folder = "data/excelfile"
+
         os.makedirs(
-            "data/pdfs",
+            save_folder,
             exist_ok=True
         )
 
         filepath = os.path.join(
-            "data/pdfs",
+            save_folder,
             uploaded_file.name
         )
 
         with open(filepath, "wb") as f:
-            f.write(uploaded_file.getbuffer())
+            f.write(
+                uploaded_file.getbuffer()
+            )
 
         st.success(
             f"{uploaded_file.name} uploaded successfully"
+        )
+
+        st.write(
+            f"Saved to: {filepath}"
         )
 
 elif menu == "Analytics":
@@ -199,6 +201,3 @@ elif menu == "Analytics":
         most_used = "SQL Database"
 
     st.write(f"Most Used Tool: {most_used}")
-
-    
-    # check core folder
