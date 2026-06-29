@@ -1,23 +1,23 @@
 import os
 import time
 import streamlit as st
-from rag.retriever import retriever_qa
-from service.sql_service import ask_database
-from database.supabase_client import save_chat
-from utils.logger import logger
+from app.rag.retriever import retriever_qa
+from app.service.sql_service import ask_database
+from app.database.supabase_client import save_chat
+from app.utils.logger import logger
 
 st.set_page_config(
-    page_title="Knowledge Agent",
+    page_title="Enterprise Knowledge Agent",
     layout="wide"
 )
 
-st.title("Knowledge Agent")
+st.title("Enterprise Knowledge Agent")
 
 menu = st.sidebar.selectbox(
     "Menu",
     [
         "Chat Assistant",
-        "Upload File",
+        "Upload PDF",
         "Analytics"
     ]
 )
@@ -149,11 +149,8 @@ elif menu == "Upload File":
         file_extension = uploaded_file.name.split(".")[-1].lower()
 
         if file_extension == "pdf":
-
             save_folder = "data/pdfs"
-
         else:
-
             save_folder = "data/excelfile"
 
         os.makedirs(
@@ -178,7 +175,6 @@ elif menu == "Upload File":
         st.write(
             f"Saved to: {filepath}"
         )
-
 
 elif menu == "Analytics":
 

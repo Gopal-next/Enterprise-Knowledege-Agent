@@ -9,6 +9,19 @@ def search_documents(vectorstore, query):
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 # def search_documents(vectorstore, query):
 
 #     results = vectorstore.max_marginal_relevance_search(

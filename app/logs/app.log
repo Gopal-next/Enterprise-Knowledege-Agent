@@ -1,0 +1,55 @@
+2026-06-25 12:36:12,411 - INFO - Question Received: Total no of employees in HR
+2026-06-25 12:36:12,411 - INFO - Tool Used: Database
+2026-06-25 12:36:12,514 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-25 12:36:14,615 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-25 12:36:14,625 - INFO - Response Time: 2.21 sec
+2026-06-25 12:36:14,625 - INFO - Answer of question: {'sql_query': 'SELECT COUNT("Employee_ID") FROM employee_dataset_100 WHERE "Department" = \'HR\';', 'result': '[(11,)]'}
+2026-06-25 12:36:15,214 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-06-25 12:36:47,440 - INFO - Question Received: Total no of employees in HR
+2026-06-25 12:36:47,440 - INFO - Tool Used: Database
+2026-06-25 12:36:47,533 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-25 12:36:48,891 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-25 12:36:48,896 - ERROR - Error: 'str' object has no attribute 'get'
+2026-06-25 12:36:48,902 - INFO - Response Time: 1.46 sec
+2026-06-25 17:49:12,348 - INFO - Question Received: summary of document
+2026-06-25 17:49:12,351 - INFO - Tool Used: PDF
+2026-06-25 17:49:12,718 - INFO - No device provided, using cpu
+2026-06-25 17:49:13,377 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-25 17:49:20,898 - INFO - Loading faiss with AVX2 support.
+2026-06-25 17:49:20,898 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-25 17:49:20,898 - INFO - Loading faiss.
+2026-06-25 17:49:21,392 - INFO - Successfully loaded faiss.
+2026-06-25 17:49:21,535 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-25 17:49:30,038 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-25 17:49:30,052 - INFO - Response Time: 17.70 sec
+2026-06-25 17:49:30,052 - INFO - Answer of question: This document outlines the leave policy primarily for **management employees**, with Factory Workmen and PSRs governed by separate settlement terms.
+
+**Key points include:**
+
+*   **Management Discretion:** All administration and approvals are based on management discretion, and no claims can be made.
+*   **Responsibilities:** Employees must understand and comply, while managers must enforce the policy.
+*   **Leave Application Process:** Standard leave applications are submitted on the HR System, requiring Line Manager approval, and additional Department Head and HR approval.
+*   **Impact of Loss of Pay (LOP):** Employees with LOP exceeding one month will not accrue privilege leaves from the date of LOP until they resume office. Their performance review and bonus will also be prorated based on active months.
+*   **Leave Calculation:** Fractions of leave of half a day or more are treated as one full day, while fractions less than half a day are omitted.
+*   **Privilege Leave:**
+    *   **Description:** For personal commitments, vacations, and maintaining work-life balance (can be short or long-term).
+    *   **Entitlement:** 22 days per annum, applied proportionally.
+    *   **Approval:** Requires prior approval.
+2026-06-25 17:49:31,103 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-06-26 15:27:11,330 - INFO - Question Received: Tell how many days leave in our document
+2026-06-26 15:27:11,351 - INFO - Tool Used: PDF
+2026-06-26 15:27:12,625 - INFO - No device provided, using cpu
+2026-06-26 15:27:13,513 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-06-26 15:27:23,542 - INFO - Loading faiss with AVX2 support.
+2026-06-26 15:27:23,543 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-06-26 15:27:23,543 - INFO - Loading faiss.
+2026-06-26 15:27:24,664 - INFO - Successfully loaded faiss.
+2026-06-26 15:27:25,023 - INFO - AFC is enabled with max remote calls: 10.
+2026-06-26 15:27:27,830 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-26 15:27:27,851 - INFO - Response Time: 16.47 sec
+2026-06-26 15:27:27,851 - INFO - Answer of question: The document states that employees are entitled to **22 days** of Privilege Leave per annum.
+
+Additionally, a minimum of **3 days** continuous leave is required for the purpose of availing Leave Travel Allowance (LTA).
+2026-06-26 15:27:29,257 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"

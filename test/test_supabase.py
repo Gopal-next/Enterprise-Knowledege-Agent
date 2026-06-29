@@ -11,8 +11,8 @@ supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 try:
     response = supabase.table("chat_history").select("*").limit(4).execute()
-    print("✅ Supabase Connected & Query Works")
+    print("Supabase Connected")
     print("Data:", response.data)
 
 except Exception as e:
-    print("❌ Connection / Query Failed:", e)
+    print("Connection / Query Failed:", e)

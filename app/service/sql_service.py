@@ -1,5 +1,6 @@
 
 import os
+import re
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_classic.chains import create_sql_query_chain
 from database.sql_tool import get_database
@@ -8,8 +9,8 @@ from langchain_community.tools.sql_database.tool import QuerySQLDatabaseTool
 from langchain_core.prompts import PromptTemplate
 load_dotenv()
 
-
 # prompt = PromptTemplate(
+
 #     input_variables=["input", "table_info", "top_k"],
 #     template="""
 #         You are a business data assistant.
@@ -30,14 +31,11 @@ load_dotenv()
 #         {input}
 #     """
 # )
-# sql_service.py
-
-import re
-
 
 def ask_database(question):
 
-    db, db_path = get_database()
+    # db, db_path = get_database()
+    db= get_database()
 
     llm = ChatGoogleGenerativeAI(
         model="gemini-2.5-flash"
@@ -49,10 +47,11 @@ def ask_database(question):
     )
 
     sql_query = chain.invoke(
-        {"question": question}
-    )
+        {
+            "question": question
+            }
+        )
 
-    # ADD REGEX HERE
     sql_query = re.sub(
         r"```(?:sql|sqlite)?",
         "",
@@ -65,9 +64,6 @@ def ask_database(question):
         sql_query = sql_query.split(
             "SQLQuery:"
         )[-1].strip()
-
-    print("Generated SQL:")
-    print(sql_query)
 
     executor = QuerySQLDatabaseTool(
         db=db
