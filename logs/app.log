@@ -440,3 +440,28 @@ The document also contains excerpts of student academic performance:
 2026-10-17 01:46:38,572 - INFO - Response Time: 8.16 sec
 2026-10-17 01:46:38,573 - INFO - Answer of question: Hello! How can I assist you today? Feel free to ask any questions you have, and I'll be happy to help!
 2026-10-17 01:46:39,964 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-17 01:47:19,040 - INFO - HTTP Request: GET http://127.0.0.1:7861/gradio_api/startup-events "HTTP/1.1 200 OK"
+2026-10-17 01:47:19,095 - INFO - HTTP Request: HEAD http://127.0.0.1:7861/ "HTTP/1.1 200 OK"
+2026-10-17 01:47:19,532 - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2026-10-17 01:47:29,678 - INFO - HTTP Request: GET https://ba4a4249-9539-4225-8d6d-69703fa0d89c.sa-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-10-17 01:47:29,721 - INFO - HTTP Request: GET https://ba4a4249-9539-4225-8d6d-69703fa0d89c.sa-east-1-0.aws.cloud.qdrant.io:6333/collections/enterprise_knowledge/exists "HTTP/1.1 200 OK"
+2026-10-17 01:47:30,133 - INFO - HTTP Request: GET https://ba4a4249-9539-4225-8d6d-69703fa0d89c.sa-east-1-0.aws.cloud.qdrant.io:6333/collections/enterprise_knowledge "HTTP/1.1 200 OK"
+2026-10-17 01:47:30,993 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-17 01:47:32,316 - INFO - HTTP Request: GET https://ba4a4249-9539-4225-8d6d-69703fa0d89c.sa-east-1-0.aws.cloud.qdrant.io:6333/collections/enterprise_knowledge "HTTP/1.1 200 OK"
+2026-10-17 01:47:32,347 - INFO - HTTP Request: GET https://ba4a4249-9539-4225-8d6d-69703fa0d89c.sa-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-10-17 01:47:33,099 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-17 01:47:34,174 - INFO - HTTP Request: POST https://ba4a4249-9539-4225-8d6d-69703fa0d89c.sa-east-1-0.aws.cloud.qdrant.io:6333/collections/enterprise_knowledge/points/query "HTTP/1.1 200 OK"
+2026-10-17 01:47:34,187 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-17 01:47:37,824 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-17 01:47:38,722 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-17 01:48:04,447 - INFO - HTTP Request: GET https://ba4a4249-9539-4225-8d6d-69703fa0d89c.sa-east-1-0.aws.cloud.qdrant.io:6333/collections/enterprise_knowledge/exists "HTTP/1.1 200 OK"
+2026-10-17 01:48:04,450 - INFO - HTTP Request: GET https://ba4a4249-9539-4225-8d6d-69703fa0d89c.sa-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-10-17 01:48:04,930 - INFO - HTTP Request: GET https://ba4a4249-9539-4225-8d6d-69703fa0d89c.sa-east-1-0.aws.cloud.qdrant.io:6333/collections/enterprise_knowledge "HTTP/1.1 200 OK"
+2026-10-17 01:48:06,151 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-17 01:48:07,672 - INFO - HTTP Request: GET https://ba4a4249-9539-4225-8d6d-69703fa0d89c.sa-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-10-17 01:48:07,685 - INFO - HTTP Request: GET https://ba4a4249-9539-4225-8d6d-69703fa0d89c.sa-east-1-0.aws.cloud.qdrant.io:6333/collections/enterprise_knowledge "HTTP/1.1 200 OK"
+2026-10-17 01:48:08,253 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-17 01:48:09,635 - INFO - HTTP Request: POST https://ba4a4249-9539-4225-8d6d-69703fa0d89c.sa-east-1-0.aws.cloud.qdrant.io:6333/collections/enterprise_knowledge/points/query "HTTP/1.1 200 OK"
+2026-10-17 01:48:09,643 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-17 01:48:14,051 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-17 01:48:14,887 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
