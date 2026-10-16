@@ -36,6 +36,12 @@ if os.getenv("LANGCHAIN_TRACING_V2") == "true" and ls_key and ls_key != "your_la
 else:
     st.sidebar.caption("⚪ **Observability:** LangSmith (Add key in .env)")
 
+qdrant_url = os.getenv("QDRANT_URL", "").strip()
+if qdrant_url and "qdrant.io" in qdrant_url:
+    st.sidebar.caption("🟢 **Vector DB:** Qdrant Cloud Active")
+else:
+    st.sidebar.caption("📁 **Vector DB:** Local FAISS")
+
 
 if "questions_count" not in st.session_state:
     st.session_state.questions_count = 0
