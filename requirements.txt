@@ -8,3 +8,7 @@ sentence-transformers
 python-dotenv
 sqlalchemy
 supabase
+langchain-google-genai
+langchain-qdrant
+qdrant-client
+bm25

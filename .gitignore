@@ -1,10 +1,6 @@
 .env
 venv/
 .venv/
-temp_uploads/
-.chroma/
-.gardio
-chroma/
 __pycache__/
 *.pyc
 just_note.txt

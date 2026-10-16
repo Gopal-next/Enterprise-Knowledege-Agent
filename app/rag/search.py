@@ -1,12 +1,13 @@
+from filtering_words import filtering_incoming_words
+
 def search_documents(vectorstore, query):
 
     results = vectorstore.similarity_search(
-        query,
+        filtering_incoming_words(query),
         k=3
     )
 
     return results
-
 
 
 

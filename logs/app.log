@@ -1,0 +1,303 @@
+2026-10-16 10:17:49,611 - INFO - Question Received: hi
+2026-10-16 10:17:49,625 - INFO - Tool Used: PDF
+2026-10-16 10:17:49,771 - INFO - Loading faiss with AVX2 support.
+2026-10-16 10:17:49,772 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-10-16 10:17:49,772 - INFO - Loading faiss.
+2026-10-16 10:17:49,924 - INFO - Successfully loaded faiss.
+2026-10-16 10:17:51,216 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 10:17:51,291 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 10:17:52,753 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 10:17:52,781 - INFO - Response Time: 3.15 sec
+2026-10-16 10:17:52,782 - INFO - Answer of question: Hello! How can I assist you today regarding company policies or leave information?
+2026-10-16 10:18:00,856 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-16 10:18:58,401 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 10:21:09,495 - INFO - Question Received: what is score in first sem
+2026-10-16 10:21:09,496 - INFO - Tool Used: PDF
+2026-10-16 10:21:10,533 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 10:21:10,588 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 10:21:12,847 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 10:21:12,865 - INFO - Response Time: 3.36 sec
+2026-10-16 10:21:12,865 - INFO - Answer of question: In the first semester, the grand total score is **395**.
+2026-10-16 10:21:14,199 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-16 10:21:38,359 - INFO - Question Received: how many employess who works in hr
+2026-10-16 10:21:38,361 - INFO - Tool Used: PDF
+2026-10-16 10:21:39,683 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 10:21:39,722 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 10:21:42,362 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 10:21:42,380 - INFO - Response Time: 4.02 sec
+2026-10-16 10:21:42,380 - INFO - Answer of question: I'm sorry, but the provided context does not contain information about the number of employees who work in HR. It outlines the company's Leave and Holiday Policy, including eligibility, leave types, and administration procedures.
+2026-10-16 10:21:43,982 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-16 10:21:51,992 - INFO - Question Received: how many employess who works in hr
+2026-10-16 10:21:51,996 - INFO - Tool Used: Database
+2026-10-16 10:21:53,514 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 10:21:55,760 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 10:21:55,767 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 10:21:56,934 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 10:21:56,946 - INFO - Response Time: 4.94 sec
+2026-10-16 10:21:56,948 - INFO - Answer of question: There are 11 employees who work in the HR department.
+
+---
+*Executed SQL:* `SELECT COUNT("Employee_ID") FROM employee_dataset_100 WHERE "Department" = 'HR'`
+2026-10-16 10:21:57,906 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-16 10:29:22,071 - INFO - Question Received: hi
+2026-10-16 10:29:22,073 - INFO - Tool Used: PDF
+2026-10-16 10:29:23,058 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 10:29:23,117 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 10:29:24,491 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 10:29:24,537 - INFO - Response Time: 2.46 sec
+2026-10-16 10:29:24,538 - INFO - Answer of question: Hello! How can I assist you today regarding your results?
+2026-10-16 10:29:25,463 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-16 10:31:09,859 - INFO - Question Received: Tell about summary of psf in 100 words
+2026-10-16 10:31:09,863 - INFO - Tool Used: PDF
+2026-10-16 10:31:11,481 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 10:31:11,652 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 10:31:28,658 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-16 10:31:28,665 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 1.2990384722701518 seconds as it raised ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}.
+2026-10-16 10:31:31,652 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-16 10:31:31,654 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 2.3679807897073015 seconds as it raised ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}.
+2026-10-16 10:31:36,071 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-16 10:31:36,074 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 4.355625088802408 seconds as it raised ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}.
+2026-10-16 10:31:52,073 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-16 10:31:52,079 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 8.867156423443046 seconds as it raised ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}.
+2026-10-16 10:32:03,523 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 10:32:03,645 - INFO - Response Time: 53.77 sec
+2026-10-16 10:32:03,646 - INFO - Answer of question: I'm sorry, but the provided company context does not contain any information about "psf". Therefore, I cannot provide a summary of it.
+2026-10-16 10:32:04,543 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-16 10:32:44,099 - INFO - Question Received: tell summary of my score of each sem
+2026-10-16 10:32:44,099 - INFO - Tool Used: PDF
+2026-10-16 10:32:45,193 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 10:32:45,297 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 10:32:48,879 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-10-16 10:32:48,882 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 1.5062459368966743 seconds as it raised ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}.
+2026-10-16 10:32:54,414 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 10:32:54,432 - INFO - Response Time: 10.33 sec
+2026-10-16 10:32:54,433 - INFO - Answer of question: Here's a summary of your scores from the provided results:
+
+*   **For the first set of subjects (Engineering Graphics & Design, Basic Electrical Engineering, Physics, Mathematics-I, Physics Lab, Electrical Engineering Lab):**
+    *   Your Grand Total is 395.
+    *   All subjects are marked as PASS.
+
+*   **For the second set of subjects (Design and Analysis of Algorithm Lab, Mini Project or Internship Assessment\*):**
+    *   Your Grand Total is 568.
+    *   Your overall result is PASS with FIRST WITH DISTINCTION.
+
+*   **For the third set of subjects (Computer Organization Lab, Discrete Structure & Logic Lab, Mini Project or Internship Assessment\*):**
+    *   Your Grand Total is 603.
+    *   Your overall result is PASS.
+
+*   **For the fourth set of subjects (Internship Assessment\*):**
+    *   Your Grand Total is 461.
+    *   Your overall result is PASS with FIRST.
+
+Please note that these are tentative results and cannot be used as a substitute for the official Statement of Marks. You may apply for revaluation or re-totaling within 20 days from the announcement of the result.
+2026-10-16 10:32:55,133 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-16 10:34:01,856 - INFO - Question Received: http://localhost:8501
+2026-10-16 10:34:01,857 - INFO - Tool Used: PDF
+2026-10-16 10:34:03,109 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 10:34:03,154 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 10:34:05,190 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 10:34:05,211 - INFO - Response Time: 3.34 sec
+2026-10-16 10:34:05,212 - INFO - Answer of question: I'm sorry, but I cannot access external links or provide information about them. My knowledge is limited to the company context provided to me.
+2026-10-16 10:34:06,287 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-16 10:34:13,557 - INFO - Question Received: Tell abosut summary of my pdf
+2026-10-16 10:34:13,557 - INFO - Tool Used: PDF
+2026-10-16 10:34:14,600 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 10:34:14,664 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 10:34:19,085 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 10:34:19,106 - INFO - Response Time: 5.54 sec
+2026-10-16 10:34:19,107 - INFO - Answer of question: The provided document appears to be a compilation of academic results for several subjects and assessments. Here's a summary of the information it contains:
+
+**Key Information:**
+
+*   **Course Results:** It lists various courses with their codes (e.g., BTCS707P, BTCS801, BTCS508P, BTCS601), internal and external marks, total marks, and a "PASS" status for each.
+*   **Grand Totals and Divisions:**
+    *   One set of results has a Grand Total of **461**, with a **PASS** result and a **FIRST** division.
+    *   Another set has a Grand Total of **481**, also with a **PASS** result.
+    *   A third set shows a Grand Total of **568**, with a **PASS** result and a **FIRST WITH DISTINCTION** division.
+*   **Specific Courses Mentioned:**
+    *   Internship Assessment
+    *   Project Management & Entrepreneurship
+    *   Internet of Things
+    *   Design Thinking
+    *   Project
+    *   Design and Analysis of Algorithm Lab
+    *   Mini Project or Internship Assessment
+    *   Software Engineering
+    *   Web Technology
+    *   Computer Networks
+    *   Big Data
+    *   Object Oriented Programming
+    *   Software Engineering Lab
+    *   Web Technology Lab
+    *   Computer Networks Lab
+*   **Important Notes:**
+    *   Many results are noted as "Tentative Result."
+    *   The status is indicative only and cannot be used as a substitute for the official Statement of Marks.
+    *   Students have **20 days** from the announcement of results to apply for revaluation or re-totaling.
+
+In essence, the document details a student's performance across multiple academic modules, showing marks, pass/fail status, overall totals, and final divisions, along with crucial disclaimers about the results' preliminary nature and revaluation procedures.
+2026-10-16 10:34:19,466 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-16 10:45:48,699 - INFO - Question Received: Tell abosut summary of my pdf
+
+
+2026-10-16 10:45:48,702 - INFO - Tool Used: PDF
+2026-10-16 10:45:49,790 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 10:45:49,885 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 10:45:50,491 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:45:50,495 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 1.9051503946947241 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h44m9.678401206s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '67449s'}]}}.
+2026-10-16 10:45:52,873 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:45:52,877 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 2.9304774551367836 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h44m7.317513695s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '67447s'}]}}.
+2026-10-16 10:45:56,262 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:45:56,264 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 4.100193538812595 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h44m3.853536902s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '67443s'}]}}.
+2026-10-16 10:46:00,862 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:46:00,865 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 8.182004149626152 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h43m59.308388577s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '67439s'}]}}.
+2026-10-16 10:46:09,590 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:46:09,592 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 16.959368147757363 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h43m50.529838791s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '67430s'}]}}.
+2026-10-16 10:46:27,479 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:46:27,480 - ERROR - Error: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h43m32.697134288s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '67412s'}]}}
+2026-10-16 10:46:27,485 - INFO - Response Time: 38.78 sec
+2026-10-16 10:57:27,060 - INFO - Question Received: Tell abosut summary of my pdf
+
+
+2026-10-16 10:57:27,062 - INFO - Tool Used: PDF
+2026-10-16 10:57:28,598 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 10:57:28,658 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 10:57:29,614 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:57:29,633 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 1.1596115434084338 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h32m30.64490363s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '66750s'}]}}.
+2026-10-16 10:57:31,214 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:57:31,216 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 2.927276240975888 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h32m28.909985996s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '66748s'}]}}.
+2026-10-16 10:57:34,729 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:57:34,731 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 4.961567669940859 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h32m25.504764776s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '66745s'}]}}.
+2026-10-16 10:57:40,141 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:57:40,144 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 8.440737649594366 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h32m20.022298598s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '66740s'}]}}.
+2026-10-16 10:57:49,512 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:57:49,515 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 16.849133409349374 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h32m10.615308229s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '66730s'}]}}.
+2026-10-16 10:58:07,245 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:58:07,247 - ERROR - Error: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h31m52.915380167s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '66712s'}]}}
+2026-10-16 10:59:45,421 - INFO - Question Received: Tell abosut summary of my pdf
+
+
+2026-10-16 10:59:45,423 - INFO - Tool Used: PDF
+2026-10-16 10:59:46,922 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 10:59:46,981 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 10:59:47,871 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:59:47,874 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 1.4118829747043835 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h30m12.294745846s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '66612s'}]}}.
+2026-10-16 10:59:49,710 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:59:49,713 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 2.59846858245222 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h30m10.427630947s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '66610s'}]}}.
+2026-10-16 10:59:52,733 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:59:52,735 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 4.915862744034745 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h30m7.393811914s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '66607s'}]}}.
+2026-10-16 10:59:58,198 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 10:59:58,200 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 8.772892251808083 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h30m2.043936077s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '66602s'}]}}.
+2026-10-16 11:00:07,621 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 11:00:07,623 - INFO - Retrying google.genai._api_client.BaseApiClient._request_once in 16.125732718578845 seconds as it raised ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h29m52.603630674s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '66592s'}]}}.
+2026-10-16 11:00:24,685 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-10-16 11:00:24,690 - ERROR - Error: Error calling model 'gemini-2.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 18h29m35.442414936s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '66575s'}]}}
+2026-10-16 11:02:11,599 - INFO - Question Received: Tell abosut summary of my pdf
+
+
+2026-10-16 11:02:11,601 - INFO - Tool Used: PDF
+2026-10-16 11:02:13,594 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 11:02:13,650 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 11:02:18,054 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 11:05:18,009 - INFO - Question Received: Tell abosut summary of my pdf
+
+
+2026-10-16 11:05:18,014 - INFO - Tool Used: PDF
+2026-10-16 11:05:19,080 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 11:05:19,154 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 11:05:23,122 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 11:05:23,145 - INFO - Response Time: 5.13 sec
+2026-10-16 11:05:23,145 - INFO - Answer of question: This document appears to be a record of academic results for several courses. It includes details such as:
+
+*   **Course Codes and Names:** Like BTCS707P (Internship Assessment), BTCS801 (Project Management & Entrepreneurship), BTCS802D (Internet of Things), BTCSOE803C (Design Thinking), BTCS804P (Project), BTCS508P (Design and Analysis of Algorithm Lab), BTCS509P (Mini Project or Internship Assessment), and BTCS103 (Physics).
+*   **Marks:** For each course, it shows internal marks, external marks, total possible marks, and marks obtained.
+*   **Result Status:** Each course has a status (e.g., PASS, ABSENT).
+*   **Grand Totals:** There are grand totals for different sets of courses, along with the total in words (e.g., Four Hundred Sixty-One, Four Hundred Eighty-One, Five Hundred Sixty-Eight, Twenty-Eight).
+*   **Division Result:** For some sets of results, a division is mentioned (e.g., FIRST, FIRST WITH DISTINCTION, -).
+*   **Important Notes:** Most results are marked as "Tentative Result." There are also notes stating that the status is indicative only and cannot be used as a substitute for the Statement of Marks. Students generally have 20 days from the announcement of results to apply for revaluation or re-totaling.
+2026-10-16 11:05:24,092 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-16 11:06:24,360 - INFO - Question Received: tell aboutmy score
+2026-10-16 11:06:24,368 - INFO - Tool Used: PDF
+2026-10-16 11:06:25,812 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 11:06:25,926 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 11:06:30,275 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 11:06:30,352 - INFO - Response Time: 5.97 sec
+2026-10-16 11:06:30,352 - INFO - Answer of question: I cannot tell you your specific score as I do not have access to your personal information or results.
+
+The provided context contains several different sets of scores and grand totals for various subjects. If you are looking for information about a specific result from the context, please let me know which one you are referring to.
+
+For your official results, you should always refer to your statement of marks.
+2026-10-16 11:06:31,072 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-16 11:15:50,226 - INFO - Question Received: Tell abosut summary of my pdf
+
+
+2026-10-16 11:15:50,228 - INFO - Tool Used: PDF
+2026-10-16 11:15:51,566 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 11:15:51,687 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 11:15:55,274 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 11:15:55,306 - INFO - Response Time: 5.07 sec
+2026-10-16 11:15:55,306 - INFO - Answer of question: This PDF contains a summary of academic results. It includes details for various courses such as:
+
+*   **Course Codes and Names:** For example, BTCS707P (Internship Assessment), BTCS801 (Project Management & Entrepreneurship), BTCS802D (Internet of Things), BTCSOE803C (Design Thinking), BTCS804P (Project), BTCS508P (Design and Analysis of Algorithm Lab), BTCS509P (Mini Project or Internship Assessment), and BTCS103 (Physics).
+*   **Marks:** For each course, internal, external, and total marks are provided.
+*   **Result Status:** The status for individual courses is indicated (e.g., PASS, ABSENT).
+*   **Grand Totals:** Overall grand totals in words and numbers are given for different sets of results (e.g., 461, 481, 568, 28).
+*   **Overall Division/Result:** The overall result for a set of subjects is specified (e.g., PASS - FIRST, PASS - FIRST WITH DISTINCTION, ABSENT).
+
+**Important Notes:**
+*   The results are **tentative** and indicative only; they cannot be used as a substitute for the official Statement of Marks.
+*   Students have a window of **20 days** from the announcement of the result to apply for revaluation or re-totaling.
+2026-10-16 11:15:56,313 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-16 11:22:02,387 - INFO - Question Received: hi
+2026-10-16 11:22:02,392 - INFO - Tool Used: PDF
+2026-10-16 11:22:09,007 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 11:22:09,084 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 11:22:10,357 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 11:22:10,393 - INFO - Response Time: 8.00 sec
+2026-10-16 11:22:10,393 - INFO - Answer of question: Hello! How can I assist you today?
+2026-10-16 11:22:11,499 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-16 11:25:46,961 - INFO - Question Received: hi how are u
+2026-10-16 11:25:46,965 - INFO - Tool Used: PDF
+2026-10-16 11:25:47,134 - INFO - Loading faiss with AVX2 support.
+2026-10-16 11:25:47,137 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-10-16 11:25:47,138 - INFO - Loading faiss.
+2026-10-16 11:25:47,301 - INFO - Successfully loaded faiss.
+2026-10-16 11:25:48,859 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 11:25:49,061 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 11:25:52,898 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 11:25:52,934 - INFO - Response Time: 5.96 sec
+2026-10-16 11:25:52,934 - INFO - Answer of question: Hello! I'm doing well, thank you for asking. How can I assist you today? 
+
+If you have any questions regarding subject marks, results, revaluation procedures, or anything else, feel free to ask!
+2026-10-16 11:25:53,998 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-16 21:52:58,828 - INFO - Question Received: hi
+2026-10-16 21:52:58,832 - INFO - Tool Used: PDF
+2026-10-16 21:52:59,013 - INFO - Loading faiss with AVX2 support.
+2026-10-16 21:52:59,015 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-10-16 21:52:59,016 - INFO - Loading faiss.
+2026-10-16 21:53:00,068 - INFO - Successfully loaded faiss.
+2026-10-16 21:53:01,395 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 21:53:01,484 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 21:53:04,489 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 21:53:04,525 - INFO - Response Time: 5.68 sec
+2026-10-16 21:53:04,525 - INFO - Answer of question: Hello! How can I assist you today? Feel free to ask any questions regarding your results, subjects, or academic guidelines!
+2026-10-16 21:53:05,402 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-10-16 21:53:23,716 - INFO - Question Received: what is strreamlit
+2026-10-16 21:53:23,717 - INFO - Tool Used: PDF
+2026-10-16 21:53:24,607 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-10-16 21:53:24,665 - INFO - AFC is enabled with max remote calls: 10.
+2026-10-16 21:53:30,540 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-16 21:53:30,560 - INFO - Response Time: 6.84 sec
+2026-10-16 21:53:30,560 - INFO - Answer of question: Streamlit is not mentioned in the provided academic records. However, as a general definition:
+
+**Streamlit** is an open-source Python framework that allows developers, data scientists, and machine learning engineers to create interactive web applications quickly and easily. 
+
+Key features include:
+* **Python-Only:** You can build complete web interfaces using only Python code, without needing web development experience in HTML, CSS, or JavaScript.
+* **Rapid Prototyping:** Ideal for turning data scripts into shareable web apps in just a few lines of code.
+* **Interactive Widgets:** Offers built-in support for sliders, text inputs, buttons, tables, and interactive data visualization charts (like Plotty, Matplotlib, or Seaborn).
+* **Data Science Friendly:** Widely used for data visualization, dashboard creation, and demonstrating machine learning models.
+2026-10-16 21:53:31,570 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"

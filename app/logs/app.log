@@ -53,3 +53,589 @@ ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
 
 Additionally, a minimum of **3 days** continuous leave is required for the purpose of availing Leave Travel Allowance (LTA).
 2026-06-26 15:27:29,257 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-04 14:48:06,855 - INFO - Question Received: Give summary of my document in 30 words
+2026-07-04 14:48:06,859 - INFO - Tool Used: PDF
+2026-07-04 14:48:07,484 - INFO - No device provided, using cpu
+2026-07-04 14:48:08,231 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-04 14:48:18,274 - INFO - Loading faiss with AVX2 support.
+2026-07-04 14:48:18,274 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-07-04 14:48:18,274 - INFO - Loading faiss.
+2026-07-04 14:48:18,902 - INFO - Successfully loaded faiss.
+2026-07-04 14:48:19,059 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-04 14:48:21,524 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-04 14:48:21,554 - INFO - Response Time: 14.69 sec
+2026-07-04 14:48:21,554 - INFO - Answer of question: Privilege Leave allows employees time for personal commitments/vacation, with 22 days/annum accrued monthly. Rules cover LOP impact, leave fractions, and require multi-level approval via the HR system.
+2026-07-04 14:48:22,873 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-23 22:33:27,388 - INFO - Question Received: Tell about leave policy
+2026-07-23 22:33:27,394 - INFO - Tool Used: PDF
+2026-07-23 22:33:27,767 - INFO - No device provided, using cpu
+2026-07-23 22:33:28,484 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-23 22:33:35,739 - INFO - Loading faiss with AVX2 support.
+2026-07-23 22:33:35,741 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-07-23 22:33:35,741 - INFO - Loading faiss.
+2026-07-23 22:33:36,437 - INFO - Successfully loaded faiss.
+2026-07-23 22:33:36,550 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-23 22:33:42,342 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-23 22:33:42,353 - INFO - Response Time: 14.96 sec
+2026-07-23 22:33:42,353 - INFO - Answer of question: Based on the provided context, here's what the leave policy entails:
+
+**Policy Name:** HR India – Leave and Holiday Policy (PIL) (KB0044163)
+
+**Purpose:**
+*   To facilitate effective administration and management of employees' leave.
+*   To highlight the procedures, benefits, and responsibilities.
+*   To specify the Company norms for availing leave.
+
+**Scope:**
+*   Outlines eligibility principles.
+*   Details specific changes to work methods.
+*   Covers benefits and general guidelines.
+
+**General Rules/Guidelines:**
+*   **Prior Approval:** Employees are required to obtain prior approval for leave.
+*   **Leave Calculation:** A fraction of leave of half a day or more is treated as one full day's leave, while a fraction of less than half a day is omitted.
+
+**Specific Leave Type Mentioned:**
+
+*   **Privilege Leave:**
+    *   **Description:** Allows employees to take leave for personal commitments, vacation, or to spend time with family to maintain work-life balance. It can be short-term (a day) or long-term (a week or more) and is normally planned in advance.
+    *   **Entitlement:** 22 Days per annum.
+    *   **Accrual:** This leave is proportionally calculated (up to December 31).
+    *   **Impact of Loss of Pay (LOP):** An employee with LOP exceeding one month will not accrue privilege leaves from the date of LOP.
+
+**Loss of Pay (LOP) Rules:**
+*   **Approval:** Leave approval for LOP cases is at the discretion of HR and the Line Manager.
+*   **Benefits:** An employee availing LOP will not be entitled to salary and any other employee benefits from the day of absence until they resume duty as approved.
+*   **Calculation:** All weekly, national, and festival holidays will be considered when calculating leave under loss of pay.
+2026-07-23 22:34:52,066 - INFO - Question Received: Tell about leave policy
+2026-07-23 22:34:52,067 - INFO - Tool Used: PDF
+2026-07-23 22:34:52,325 - INFO - No device provided, using cpu
+2026-07-23 22:34:53,191 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-23 22:35:00,291 - INFO - Loading faiss with AVX2 support.
+2026-07-23 22:35:00,292 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-07-23 22:35:00,292 - INFO - Loading faiss.
+2026-07-23 22:35:00,327 - INFO - Successfully loaded faiss.
+2026-07-23 22:35:00,430 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-23 22:35:07,863 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-23 22:35:07,870 - INFO - Response Time: 15.80 sec
+2026-07-23 22:35:07,870 - INFO - Answer of question: The HR India – Leave and Holiday Policy (PIL) is designed to facilitate the effective administration and management of employee leave. It outlines procedures, benefits, responsibilities, and company norms for availing leave, covering eligibility principles, work method changes, benefits, and general guidelines.
+
+Key aspects of the leave policy include:
+
+*   **Purpose:** To administer and manage employee leave effectively, highlighting procedures, benefits, responsibilities, and company norms for availing leave.
+*   **Scope:** Covers eligibility principles, specific changes to work methods, benefits, and general guidelines.
+
+**Specific Leave Types Mentioned:**
+
+*   **Privilege Leave:**
+    *   **Description:** Allows employees to take leave for personal commitments, vacation, or spending time with family to maintain work-life balance. It can be short-term (a day) or long-term (a week or more) and is normally planned in advance.
+    *   **Entitlement:** 22 Days per annum.
+    *   **Accrual:** Employees with Loss of Pay (LOP) exceeding 1 month will not accrue privilege leaves from the date of LOP.
+
+**General Rules and Guidelines:**
+
+*   **Leave Calculation:**
+    *   A fraction of leave of half a day or more is treated as one full day's leave.
+    *   A fraction of less than half a day is omitted.
+*   **Prior Approval:** Employees are required to obtain prior approval.
+
+**Loss of Pay (LOP):**
+
+*   **Approval:** Leave approval for LOP is based on HR and Line manager discretion only.
+*   **Impact on Benefits:** An employee availing LOP will not be entitled to salary and any other employee benefits from the day of absence until they resume duty as approved by the Manager/company.
+*   **Calculation:** All weekly, national, and festival holidays will be considered when calculating leave under loss of pay.
+2026-07-23 22:36:56,190 - INFO - Question Received: Tell about leave policy
+2026-07-23 22:36:56,190 - INFO - Tool Used: PDF
+2026-07-23 22:36:56,350 - INFO - No device provided, using cpu
+2026-07-23 22:36:58,341 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-23 22:37:03,018 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-23 22:37:09,271 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-23 22:37:09,278 - INFO - Response Time: 13.08 sec
+2026-07-23 22:37:09,278 - INFO - Answer of question: The provided document, "HR India – Leave and Holiday Policy (PIL)", outlines the company's leave policy.
+
+**Purpose:**
+The policy aims to facilitate effective administration and management of employees' leave, highlighting procedures, benefits, responsibilities, and specifying company norms for availing leave.
+
+**Scope:**
+It outlines eligibility principles, specific changes to work methods, benefits, and general guidelines related to leave.
+
+**Key aspects of the leave policy mentioned:**
+
+1.  **Privilege Leave:**
+    *   **Description:** Employees can take this leave for personal commitments, vacation, or spending time with family to maintain work-life balance. It can be short-term (a day) or long-term (a week or more) and is normally planned in advance.
+    *   **Entitlement:** 22 Days per annum, calculated proportionally.
+    *   **Calculation:** A fraction of leave of half a day or more is treated as one full day, while a fraction less than half a day is omitted.
+
+2.  **Loss of Pay (LOP):**
+    *   **Approvals:** Leave approval for LOP is solely at the discretion of HR and the Line manager.
+    *   **Impact:** An employee availing LOP will not be entitled to salary and any other employee benefits from the day of absence until the day they resume duty, as approved by the Manager/company.
+    *   **Calculation:** All weekly, national, and festival holidays will be considered when calculating leave under loss of pay.
+    *   **Accrual Impact:** Any employee with LOP exceeding 1 month will not accrue privilege leaves from the date the LOP begins.
+
+Employees are required to obtain prior approval for leave.
+2026-07-23 22:37:09,838 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 521 "
+2026-07-23 22:41:08,209 - INFO - Question Received: Tell about leave policy
+2026-07-23 22:41:08,210 - INFO - Tool Used: PDF
+2026-07-23 22:41:08,464 - INFO - No device provided, using cpu
+2026-07-23 22:41:09,111 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-23 22:41:15,608 - INFO - Loading faiss with AVX2 support.
+2026-07-23 22:41:15,608 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-07-23 22:41:15,608 - INFO - Loading faiss.
+2026-07-23 22:41:15,691 - INFO - Successfully loaded faiss.
+2026-07-23 22:41:15,802 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-23 22:41:22,120 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-23 22:41:22,130 - INFO - Response Time: 13.92 sec
+2026-07-23 22:41:22,130 - INFO - Answer of question: Based on the provided context, the leave policy is:
+
+**HR India – Leave and Holiday Policy (PIL) - KB0044163 (Latest version)**
+
+**Purpose:**
+The policy aims to facilitate effective administration and management of employees' leave. It highlights procedures, benefits, responsibilities, and specifies the Company's norms for availing leave.
+
+**Scope:**
+It outlines eligibility principles, specific changes to work methods, benefits, and general guidelines related to leave.
+
+**General Rules/Guidelines:**
+*   Prior approval is required for all leaves.
+*   When calculating leave, a fraction of leave of half a day or more is treated as one full day, and a fraction of less than half a day is omitted.
+
+**Leave Classification & Description (as per the provided text):**
+
+1.  **Privilege Leave:**
+    *   **Description:** Allows employees to take leave for personal commitments, vacations, or to spend time with family to maintain work-life balance. It can be short-term (a day, a week) or long-term, and is normally planned in advance.
+    *   **Entitlement:** 22 Days per annum (proportionally calculated until December 31).
+
+**Loss of Pay (LOP) Rules:**
+*   Leave approval for Loss of Pay is based on HR and Line Manager discretion only.
+*   An employee availing Loss of Pay will not be entitled to salary and any other employee benefits from the day they are absent until the day they resume duty (as approved by the Manager/company).
+*   All weekly, national, and festival holidays will be considered while calculating leave under Loss of Pay.
+*   Any employee with Loss of Pay greater than 1 month shall not accrue privilege leaves from the date of LOP.
+2026-07-23 22:41:22,801 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 14:37:00,254 - INFO - Question Received: Summary on given pdf
+2026-07-24 14:37:00,257 - INFO - Tool Used: PDF
+2026-07-24 14:37:00,907 - INFO - No device provided, using cpu
+2026-07-24 14:37:01,859 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 14:37:11,876 - INFO - Loading faiss with AVX2 support.
+2026-07-24 14:37:11,877 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-07-24 14:37:11,877 - INFO - Loading faiss.
+2026-07-24 14:37:12,620 - INFO - Successfully loaded faiss.
+2026-07-24 14:37:12,809 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 14:37:21,255 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 14:37:21,285 - INFO - Response Time: 21.02 sec
+2026-07-24 14:37:21,286 - INFO - Answer of question: This policy outlines the administration and approval of leaves, which are subject to management discretion, meaning no claims can be made.
+
+**Key Points:**
+*   **Responsibilities:** Employees must understand and comply with the policy, while Managers are responsible for enforcing it.
+*   **Eligibility:** Applies to all management employees on the company roll. Factory Workmen and PSRs are governed by their respective settlement terms.
+*   **Leave Calculation:** Fractions of half a day or more are treated as one full day's leave, while fractions less than half a day are omitted.
+
+**Privilege Leave (Detailed):**
+*   **Purpose:** Allows employees to take leave for personal commitments, vacations, and to maintain work-life balance. It can be short-term or long-term (a day, a week, or more) and is normally planned in advance.
+*   **Entitlement:** 22 days per annum, which is accrued proportionally.
+*   **Special Conditions (Leave Without Pay - LOP):**
+    *   Any employee with LOP exceeding one month will not accrue privilege leaves from the date of LOP until they resume office.
+    *   Performance review and bonus calibration for employees with LOP greater than one month will be prorated based on their total active months of service during the performance review period.
+*   **Approvals:** Requires a standard leave application on the HR System with Line Manager Approval, as well as additional Department Head and HR Approval.
+2026-07-24 14:37:22,572 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 14:37:33,704 - INFO - Question Received: Tell about yoga 
+2026-07-24 14:37:33,704 - INFO - Tool Used: PDF
+2026-07-24 14:37:34,007 - INFO - No device provided, using cpu
+2026-07-24 14:37:34,647 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 14:37:40,737 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 14:37:41,973 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 14:37:41,982 - INFO - Response Time: 8.27 sec
+2026-07-24 14:37:41,983 - INFO - Answer of question: I'm sorry, but based on the provided context, there is no information about yoga. The document discusses leave policies, applications, and carry-forward rules.
+2026-07-24 14:37:42,158 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 15:15:28,477 - INFO - Question Received: Can u tell the eligible age group for this
+2026-07-24 15:15:28,481 - INFO - Tool Used: PDF
+2026-07-24 15:15:29,160 - INFO - No device provided, using cpu
+2026-07-24 15:15:29,963 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 15:15:39,671 - INFO - Loading faiss with AVX2 support.
+2026-07-24 15:15:39,678 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-07-24 15:15:39,678 - INFO - Loading faiss.
+2026-07-24 15:15:40,575 - INFO - Successfully loaded faiss.
+2026-07-24 15:15:40,776 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 15:15:42,815 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 15:15:42,832 - INFO - Response Time: 14.35 sec
+2026-07-24 15:15:42,833 - INFO - Answer of question: The eligible age group for the dance courses is **8 years of age and above**.
+2026-07-24 15:15:44,020 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 15:31:20,349 - INFO - Question Received: how do i enroll ?
+2026-07-24 15:31:20,361 - INFO - Tool Used: PDF
+2026-07-24 15:31:23,680 - INFO - No device provided, using cpu
+2026-07-24 15:31:25,342 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 15:31:43,720 - INFO - Loading faiss with AVX2 support.
+2026-07-24 15:31:43,722 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-07-24 15:31:43,722 - INFO - Loading faiss.
+2026-07-24 15:31:43,951 - INFO - Successfully loaded faiss.
+2026-07-24 15:31:44,712 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 15:31:47,034 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 15:31:47,158 - INFO - Response Time: 26.76 sec
+2026-07-24 15:31:47,158 - INFO - Answer of question: You can enroll by:
+1. Downloading the Sensationz App.
+2. Creating your profile.
+3. Selecting your preferred course.
+4. Completing the payment.
+
+Your classes will be activated within 48 hours after successful payment.
+2026-07-24 15:31:48,281 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 15:32:22,685 - INFO - Question Received: dance courses
+2026-07-24 15:32:22,690 - INFO - Tool Used: PDF
+2026-07-24 15:32:23,363 - INFO - No device provided, using cpu
+2026-07-24 15:32:24,229 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 15:32:30,475 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 15:32:34,376 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 15:32:34,427 - INFO - Response Time: 11.73 sec
+2026-07-24 15:32:34,427 - INFO - Answer of question: We offer a variety of dance courses and styles, including:
+*   **Bollywood** (including Ladies Bollywood – fun and fitness-focused, and Kids Bollywood – age-appropriate dance training for children)
+*   **Semi-Classical** (a blend of classical techniques and modern choreography)
+*   **Hip-Hop**
+*   **Freestyle**
+*   **Wedding Choreography**
+2026-07-24 15:32:35,087 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 15:53:05,006 - INFO - Question Received: I am feeling tired , suggest some ways that i can feel fresh
+2026-07-24 15:53:05,007 - INFO - Tool Used: PDF
+2026-07-24 15:53:05,738 - INFO - No device provided, using cpu
+2026-07-24 15:53:07,470 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 15:53:17,048 - INFO - Loading faiss with AVX2 support.
+2026-07-24 15:53:17,048 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-07-24 15:53:17,048 - INFO - Loading faiss.
+2026-07-24 15:53:17,193 - INFO - Successfully loaded faiss.
+2026-07-24 15:53:17,395 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 15:53:20,063 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 15:53:20,083 - INFO - Response Time: 15.07 sec
+2026-07-24 15:53:20,083 - INFO - Answer of question: Based on the information provided in the Sensation Dance Academy FAQ, I don't have details on how to feel fresh. My context is limited to questions about dance classes, offers, and the academy's services.
+2026-07-24 15:53:21,152 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 16:02:08,036 - INFO - Question Received: I am tired suggest some ways to feel fresh
+2026-07-24 16:02:08,036 - INFO - Tool Used: PDF
+2026-07-24 16:02:08,703 - INFO - No device provided, using cpu
+2026-07-24 16:02:09,390 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 16:02:18,864 - INFO - Loading faiss with AVX2 support.
+2026-07-24 16:02:18,865 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-07-24 16:02:18,865 - INFO - Loading faiss.
+2026-07-24 16:02:18,986 - INFO - Successfully loaded faiss.
+2026-07-24 16:02:19,156 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 16:02:21,012 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 16:02:21,030 - INFO - Response Time: 12.98 sec
+2026-07-24 16:02:21,031 - INFO - Answer of question: I couldn't find that information in the available company details.
+
+However, if you're feeling tired, some general ways to feel fresh include taking a short walk, stretching, listening to some upbeat music, or taking a break to hydrate. If you're looking for a fun way to refresh, dancing can be a great option!
+2026-07-24 16:02:21,790 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 16:27:09,697 - INFO - Question Received: Are these classes suitable for beginners?
+2026-07-24 16:27:09,703 - INFO - Tool Used: PDF
+2026-07-24 16:27:10,305 - INFO - No device provided, using cpu
+2026-07-24 16:27:11,078 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 16:27:17,244 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 16:27:18,885 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 16:27:18,924 - INFO - Response Time: 9.21 sec
+2026-07-24 16:27:18,925 - INFO - Answer of question: Yes, our classes are suitable for beginners. We offer courses designed for Beginners, Intermediate, and Advanced learners, so you can join at the skill level that's right for you.
+2026-07-24 16:27:19,884 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 16:28:11,242 - INFO - Question Received: Tell me about the company profile 
+2026-07-24 16:28:11,243 - INFO - Tool Used: PDF
+2026-07-24 16:28:11,692 - INFO - No device provided, using cpu
+2026-07-24 16:28:12,337 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 16:28:17,307 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 16:28:19,779 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 16:28:19,791 - INFO - Response Time: 8.54 sec
+2026-07-24 16:28:19,792 - INFO - Answer of question: Sensationz Dance Academy offers online dance classes that are available worldwide through our official app. Our company is based in Rohini, Sector 7, Delhi.
+
+We provide 20 planned classes in a course, with batch sizes typically ranging from 20 to 60 students, depending on the selected time slot. Classes are conducted Monday to Friday according to the selected batch schedule.
+
+We offer a variety of dance styles, including Bollywood, Semi-Classical, Hip-Hop, Freestyle, and Wedding Choreography. Currently, we have a special offer price of \u20b91,500 + GST for our courses. After enrollment and payment, you can start by downloading the Sensation App.
+2026-07-24 16:28:20,063 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 16:31:41,333 - INFO - Question Received: my daughter is 5 years old can she opt for semi classical ?
+2026-07-24 16:31:41,333 - INFO - Tool Used: PDF
+2026-07-24 16:31:41,804 - INFO - No device provided, using cpu
+2026-07-24 16:31:42,404 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 16:31:47,481 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 16:31:52,879 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 16:31:52,890 - INFO - Response Time: 11.55 sec
+2026-07-24 16:31:52,891 - INFO - Answer of question: I couldn't find specific age requirements for the Semi-Classical course in the available company details.
+
+However, we do offer "Kids Bollywood" which is described as age-appropriate dance training for children. For Semi-Classical, it's best to inquire directly with Sensationz Dance Academy to see if it's suitable for a 5-year-old. You might also consider attending a trial class first to see if it's a good fit.
+2026-07-24 16:31:53,695 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 16:33:21,918 - INFO - Question Received: can you guide me through the sensationz app
+2026-07-24 16:33:21,920 - INFO - Tool Used: PDF
+2026-07-24 16:33:22,369 - INFO - No device provided, using cpu
+2026-07-24 16:33:23,129 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 16:33:28,424 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 16:33:31,462 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 16:33:31,473 - INFO - Response Time: 9.55 sec
+2026-07-24 16:33:31,475 - INFO - Answer of question: Certainly! Here's how you can navigate the Sensationz App:
+
+1.  **Download the App:** After completing your payment, the first step is to download the Sensationz App.
+2.  **Login:** You will receive your login credentials and further instructions to access your account.
+3.  **Start Classes:** Your classes will begin within 72 hours of successful enrollment.
+4.  **Attend Live Sessions:** All classes are conducted through the Sensationz App, allowing you to attend live sessions from home.
+5.  **Watch Recorded Sessions:** The app also provides recorded class sessions, so you can watch them later for practice, revision, or to revisit lessons anytime.
+6.  **Access Trial Classes:** If you wish to try a class before enrolling, you can access trial classes from the "My Profile" section within the Sensationz App.
+2026-07-24 16:33:31,805 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 16:34:00,564 - INFO - Question Received: can i change my class timings
+2026-07-24 16:34:00,565 - INFO - Tool Used: PDF
+2026-07-24 16:34:01,016 - INFO - No device provided, using cpu
+2026-07-24 16:34:01,736 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 16:34:06,624 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 16:34:09,177 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 16:34:09,187 - INFO - Response Time: 8.62 sec
+2026-07-24 16:34:09,187 - INFO - Answer of question: I couldn't find that information in the available company details. For questions about changing class timings after enrollment, I recommend contacting support directly.
+2026-07-24 16:34:09,771 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 16:34:49,434 - INFO - Question Received: do we have classes for advanced individuals
+2026-07-24 16:34:49,435 - INFO - Tool Used: PDF
+2026-07-24 16:34:49,912 - INFO - No device provided, using cpu
+2026-07-24 16:34:50,616 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 16:34:55,803 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 16:34:57,617 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 16:34:57,627 - INFO - Response Time: 8.19 sec
+2026-07-24 16:34:57,628 - INFO - Answer of question: Yes, we have courses designed for Advanced learners, so you can join according to your skill level. We also offer courses for Beginners and Intermediate learners.
+2026-07-24 16:34:57,841 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 16:35:20,248 - INFO - Question Received: does sensationz offer solo batches ?
+2026-07-24 16:35:20,250 - INFO - Tool Used: PDF
+2026-07-24 16:35:20,708 - INFO - No device provided, using cpu
+2026-07-24 16:35:21,372 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 16:35:26,462 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 16:35:28,540 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 16:35:28,567 - INFO - Response Time: 8.31 sec
+2026-07-24 16:35:28,567 - INFO - Answer of question: I couldn't find that information in the available company details. The context mentions that new batches start regularly and offers flexible schedules for morning, afternoon, and evening batches. It doesn't specifically mention solo batches or one-on-one classes.
+
+If you're interested in private instruction, I recommend contacting Sensationz Dance Academy directly to inquire about options that might not be listed in the general FAQs.
+2026-07-24 16:35:28,812 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 16:56:32,074 - INFO - Question Received: teacher experience
+2026-07-24 16:56:32,082 - INFO - Tool Used: PDF
+2026-07-24 16:56:32,824 - INFO - No device provided, using cpu
+2026-07-24 16:56:33,641 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 16:56:40,061 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 16:56:42,002 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 16:56:42,043 - INFO - Response Time: 9.94 sec
+2026-07-24 16:56:42,043 - INFO - Answer of question: Our instructors are well-trained, certified, and experienced professionals. They are committed to providing high-quality dance training and an enjoyable learning experience.
+2026-07-24 16:56:43,078 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 17:00:50,321 - INFO - Question Received: class strength
+2026-07-24 17:00:50,322 - INFO - Tool Used: PDF
+2026-07-24 17:00:50,721 - INFO - No device provided, using cpu
+2026-07-24 17:00:51,366 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 17:00:56,289 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 17:00:58,232 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 17:00:58,242 - INFO - Response Time: 7.92 sec
+2026-07-24 17:00:58,242 - INFO - Answer of question: The batch strength generally varies between 20 to 60 students, depending on the selected time slot.
+2026-07-24 17:00:58,957 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 17:01:38,972 - INFO - Question Received: sensationz company background
+2026-07-24 17:01:38,972 - INFO - Tool Used: PDF
+2026-07-24 17:01:39,449 - INFO - No device provided, using cpu
+2026-07-24 17:01:40,120 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 17:01:45,221 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 17:01:47,225 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 17:01:47,234 - INFO - Response Time: 8.26 sec
+2026-07-24 17:01:47,234 - INFO - Answer of question: I couldn't find that information in the available company details. If you have questions about specific classes or how Sensationz works, I'd be happy to help with that!
+2026-07-24 17:01:47,582 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-24 17:01:59,287 - INFO - Question Received: about us
+2026-07-24 17:01:59,287 - INFO - Tool Used: PDF
+2026-07-24 17:01:59,730 - INFO - No device provided, using cpu
+2026-07-24 17:02:00,326 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-24 17:02:05,307 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-24 17:02:08,812 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-24 17:02:08,823 - INFO - Response Time: 9.53 sec
+2026-07-24 17:02:08,823 - INFO - Answer of question: Sensationz Dance Academy offers both live online classes and recorded class sessions through the Sensationz App. Our classes are conducted online and are available worldwide, allowing you to attend live sessions from the comfort of your home. Our company is based in Rohini, Sector 7, Delhi. We offer flexible schedules with Morning, Afternoon, and Evening batches, so you can choose the days and time slots that best suit your availability.
+2026-07-24 17:02:09,171 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-07-29 13:50:54,909 - INFO - Question Received: hi
+2026-07-29 13:50:54,933 - INFO - Tool Used: PDF
+2026-07-29 13:50:57,909 - INFO - No device provided, using cpu
+2026-07-29 13:50:59,038 - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-07-29 13:51:13,178 - INFO - Loading faiss with AVX2 support.
+2026-07-29 13:51:13,178 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-07-29 13:51:13,179 - INFO - Loading faiss.
+2026-07-29 13:51:15,115 - INFO - Successfully loaded faiss.
+2026-07-29 13:51:15,767 - INFO - AFC is enabled with max remote calls: 10.
+2026-07-29 13:51:19,546 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-07-29 13:51:19,597 - INFO - Response Time: 24.61 sec
+2026-07-29 13:51:19,597 - INFO - Answer of question: Hello Ma'am/Sir! Welcome to Sensation Dance Academy. How may I help you today?
+2026-07-29 13:51:30,799 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-08-01 13:14:12,712 - INFO - Question Received: Hi
+2026-08-01 13:14:12,713 - INFO - Tool Used: PDF
+2026-08-01 13:14:15,292 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 13:14:15,570 - INFO - Loading faiss with AVX2 support.
+2026-08-01 13:14:15,570 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-08-01 13:14:15,570 - INFO - Loading faiss.
+2026-08-01 13:14:16,259 - INFO - Successfully loaded faiss.
+2026-08-01 13:14:16,882 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 13:14:16,899 - INFO - AFC is enabled with max remote calls: 10.
+2026-08-01 13:14:18,387 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-01 13:14:18,392 - ERROR - Error: could not convert string to float: "Hello Ma'am/Sir! Welcome to Sensation Dance Academy. How may I help you today?"
+2026-08-01 13:14:18,400 - INFO - Response Time: 5.68 sec
+2026-08-01 13:20:09,480 - INFO - Question Received: hi
+2026-08-01 13:20:09,491 - INFO - Tool Used: PDF
+2026-08-01 13:20:12,565 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 13:20:13,640 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 13:20:13,720 - INFO - AFC is enabled with max remote calls: 10.
+2026-08-01 13:20:15,398 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-01 13:20:15,469 - ERROR - Error: could not convert string to float: "Hello Ma'am/Sir! Welcome to Sensation Dance Academy. How may I help you today?"
+2026-08-01 13:20:15,504 - INFO - Response Time: 6.00 sec
+2026-08-01 13:23:28,114 - INFO - Question Received: HI
+2026-08-01 13:23:28,116 - INFO - Tool Used: PDF
+2026-08-01 13:23:30,876 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 13:23:31,147 - INFO - Loading faiss with AVX2 support.
+2026-08-01 13:23:31,147 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-08-01 13:23:31,147 - INFO - Loading faiss.
+2026-08-01 13:23:31,224 - INFO - Successfully loaded faiss.
+2026-08-01 13:23:32,096 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 13:23:32,112 - INFO - AFC is enabled with max remote calls: 10.
+2026-08-01 13:23:33,814 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-01 13:23:33,822 - ERROR - Error: could not convert string to float: "Hello Ma'am/Sir! Welcome to Sensation Dance Academy. How may I help you today?"
+2026-08-01 13:23:33,832 - INFO - Response Time: 5.71 sec
+2026-08-01 13:25:57,524 - INFO - Question Received: hi
+2026-08-01 13:25:57,535 - INFO - Tool Used: PDF
+2026-08-01 13:26:00,302 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 13:26:01,253 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 13:26:01,289 - INFO - AFC is enabled with max remote calls: 10.
+2026-08-01 13:26:02,246 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-01 13:26:02,278 - ERROR - Error: could not convert string to float: "Hello Ma'am/Sir! Welcome to Sensation Dance Academy. How may I help you today?"
+2026-08-01 13:26:02,306 - INFO - Response Time: 4.76 sec
+2026-08-01 13:27:15,151 - INFO - Question Received: hi
+2026-08-01 13:27:15,153 - INFO - Tool Used: PDF
+2026-08-01 13:27:17,682 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 13:27:18,894 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 13:27:18,942 - INFO - AFC is enabled with max remote calls: 10.
+2026-08-01 13:27:20,380 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-01 13:27:20,419 - INFO - Response Time: 5.26 sec
+2026-08-01 13:27:20,419 - INFO - Answer of question: Hello Ma'am/Sir! Welcome to Sensation Dance Academy. How may I help you today?
+2026-08-01 13:27:21,734 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-08-01 14:51:24,343 - INFO - Question Received: hi
+2026-08-01 14:51:24,345 - INFO - Tool Used: PDF
+2026-08-01 14:51:25,166 - ERROR - Error: 1 validation error for GoogleGenerativeAIEmbeddings
+  Value error, API key required for Gemini Developer API. Provide api_key parameter or set GOOGLE_API_KEY/GEMINI_API_KEY environment variable. [type=value_error, input_value={'model': 'models/gemini-...ut_dimensionality': 768}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-08-01 14:51:25,169 - INFO - Response Time: 0.82 sec
+2026-08-01 15:07:24,854 - INFO - Question Received: Hi
+2026-08-01 15:07:24,858 - INFO - Tool Used: PDF
+2026-08-01 15:07:25,308 - ERROR - Error: 1 validation error for GoogleGenerativeAIEmbeddings
+  Value error, API key required for Gemini Developer API. Provide api_key parameter or set GOOGLE_API_KEY/GEMINI_API_KEY environment variable. [type=value_error, input_value={'model': 'models/gemini-...ut_dimensionality': 768}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+2026-08-01 15:07:25,311 - INFO - Response Time: 0.44 sec
+2026-08-01 15:13:18,852 - INFO - Question Received: hi
+2026-08-01 15:13:18,852 - INFO - Tool Used: PDF
+2026-08-01 15:13:25,309 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 15:13:29,971 - INFO - Loading faiss with AVX2 support.
+2026-08-01 15:13:29,971 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-08-01 15:13:29,973 - INFO - Loading faiss.
+2026-08-01 15:13:31,632 - INFO - Successfully loaded faiss.
+2026-08-01 15:13:35,938 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 15:13:35,974 - INFO - AFC is enabled with max remote calls: 10.
+2026-08-01 15:13:37,722 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-01 15:13:37,744 - INFO - Response Time: 18.88 sec
+2026-08-01 15:13:37,744 - INFO - Answer of question: Hello Ma'am/Sir! Welcome to Sensation Dance Academy. How may I help you today?
+2026-08-01 15:13:39,709 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-08-01 15:15:38,844 - INFO - Question Received: Can u tell about google
+2026-08-01 15:15:38,845 - INFO - Tool Used: PDF
+2026-08-01 15:15:42,715 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 15:15:42,834 - INFO - Loading faiss with AVX2 support.
+2026-08-01 15:15:42,835 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-08-01 15:15:42,835 - INFO - Loading faiss.
+2026-08-01 15:15:42,996 - INFO - Successfully loaded faiss.
+2026-08-01 15:15:43,746 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 15:15:43,776 - INFO - AFC is enabled with max remote calls: 10.
+2026-08-01 15:15:46,277 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-01 15:15:46,315 - INFO - Response Time: 7.46 sec
+2026-08-01 15:15:46,315 - INFO - Answer of question: I'm sorry, I don't have information about "Google" in my current knowledge base for Sensationz Dance Academy. Is there something specific about our dance classes or academy that I can help you with? If you had a different question in mind, please feel free to ask!
+2026-08-01 15:15:47,535 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-08-01 15:16:56,888 - INFO - Question Received: I am feeling not ok tell some ways to work upon
+2026-08-01 15:16:56,888 - INFO - Tool Used: PDF
+2026-08-01 15:16:59,409 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 15:17:01,046 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 15:17:01,067 - INFO - AFC is enabled with max remote calls: 10.
+2026-08-01 15:17:09,536 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-01 15:17:09,557 - INFO - Response Time: 12.66 sec
+2026-08-01 15:17:09,557 - INFO - Answer of question: I understand you're not feeling okay. As an AI assistant for Sensationz Dance Academy, my purpose is to help with questions related to our dance classes and services. I'm not equipped to provide advice on personal well-being.
+
+If you have any questions about our dance styles, class schedules, or how to enroll, I'd be happy to assist you!
+2026-08-01 15:17:09,819 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-08-01 15:18:27,022 - INFO - Question Received: I am feeling not ok tell some ways to work upon
+2026-08-01 15:18:27,022 - INFO - Tool Used: PDF
+2026-08-01 15:18:30,442 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 15:18:31,427 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 15:18:31,451 - INFO - AFC is enabled with max remote calls: 10.
+2026-08-01 15:18:36,089 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-01 15:18:36,104 - INFO - Response Time: 9.08 sec
+2026-08-01 15:18:36,104 - INFO - Answer of question: I'm sorry to hear that you're not feeling okay. While I can't offer specific personal advice as an AI, I can share some general suggestions that many people find helpful when they're feeling down:
+
+1.  **Talk to someone:** Sharing how you feel with a trusted friend, family member, or a professional can make a big difference.
+2.  **Engage in a hobby:** Sometimes, distracting yourself with something you enjoy, like dancing, reading, listening to music, or creating art, can help shift your mood.
+3.  **Light exercise:** Even a short walk can release endorphins and improve your mood.
+4.  **Practice mindfulness or meditation:** Taking a few moments to focus on your breath can help calm your mind.
+5.  **Ensure basic needs are met:** Make sure you're getting enough sleep, eating nutritious food, and staying hydrated.
+
+If you continue to feel unwell, it might be a good idea to speak with a healthcare professional or a mental health expert who can provide personalized support and guidance. They can offer the best advice tailored to your specific situation.
+2026-08-01 15:18:38,146 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-08-01 15:34:24,654 - INFO - Question Received: Hi
+2026-08-01 15:34:24,657 - INFO - Tool Used: PDF
+2026-08-01 15:34:26,197 - INFO - HTTP Request: GET https://6a7751d5-cb34-4906-8401-a1da0ef1e9b3.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-08-01 15:34:26,212 - INFO - HTTP Request: GET https://6a7751d5-cb34-4906-8401-a1da0ef1e9b3.eu-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-08-01 15:34:26,540 - INFO - HTTP Request: PUT https://6a7751d5-cb34-4906-8401-a1da0ef1e9b3.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/sensationz_docs "HTTP/1.1 200 OK"
+2026-08-01 15:34:26,705 - INFO - HTTP Request: GET https://6a7751d5-cb34-4906-8401-a1da0ef1e9b3.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/sensationz_docs "HTTP/1.1 200 OK"
+2026-08-01 15:34:28,513 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 15:34:28,525 - ERROR - Error: Existing Qdrant collection is configured for dense vectors with 768 dimensions. Selected embeddings are 3072-dimensional. If you want to recreate the collection, set `force_recreate` parameter to `True`.
+2026-08-01 15:34:28,535 - INFO - Response Time: 3.87 sec
+2026-08-01 15:52:13,459 - INFO - Question Received: hi
+2026-08-01 15:52:13,462 - INFO - Tool Used: PDF
+2026-08-01 15:52:15,134 - INFO - HTTP Request: GET https://6a7751d5-cb34-4906-8401-a1da0ef1e9b3.eu-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-08-01 15:52:15,315 - INFO - HTTP Request: GET https://6a7751d5-cb34-4906-8401-a1da0ef1e9b3.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/sensationz_docs "HTTP/1.1 200 OK"
+2026-08-01 15:52:15,316 - INFO - HTTP Request: GET https://6a7751d5-cb34-4906-8401-a1da0ef1e9b3.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-08-01 15:52:17,575 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 15:52:17,591 - ERROR - Error: Existing Qdrant collection is configured for dense vectors with 768 dimensions. Selected embeddings are 3072-dimensional. If you want to recreate the collection, set `force_recreate` parameter to `True`.
+2026-08-01 15:52:17,599 - INFO - Response Time: 4.13 sec
+2026-08-01 15:53:09,887 - INFO - Question Received: HI
+2026-08-01 15:53:09,887 - INFO - Tool Used: PDF
+2026-08-01 15:53:12,459 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 15:53:12,747 - INFO - Loading faiss with AVX2 support.
+2026-08-01 15:53:12,748 - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-08-01 15:53:12,748 - INFO - Loading faiss.
+2026-08-01 15:53:12,899 - INFO - Successfully loaded faiss.
+2026-08-01 15:53:15,198 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 15:53:15,236 - INFO - AFC is enabled with max remote calls: 10.
+2026-08-01 15:53:33,513 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-01 15:53:33,535 - INFO - Response Time: 23.64 sec
+2026-08-01 15:53:33,535 - INFO - Answer of question: Hello Ma'am/Sir! Welcome to Sensation Dance Academy. How may I help you today?
+2026-08-01 15:53:34,671 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-08-01 15:54:36,910 - INFO - Question Received: HI
+2026-08-01 15:54:36,911 - INFO - Tool Used: PDF
+2026-08-01 15:54:37,905 - INFO - HTTP Request: GET https://6a7751d5-cb34-4906-8401-a1da0ef1e9b3.eu-west-2-0.aws.cloud.qdrant.io:6333/collections "HTTP/1.1 200 OK"
+2026-08-01 15:54:37,989 - INFO - HTTP Request: GET https://6a7751d5-cb34-4906-8401-a1da0ef1e9b3.eu-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-08-01 15:54:38,063 - INFO - HTTP Request: GET https://6a7751d5-cb34-4906-8401-a1da0ef1e9b3.eu-west-2-0.aws.cloud.qdrant.io:6333/collections/new "HTTP/1.1 200 OK"
+2026-08-01 15:54:42,733 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 15:54:42,746 - ERROR - Error: Existing Qdrant collection is configured for dense vectors with 384 dimensions. Selected embeddings are 3072-dimensional. If you want to recreate the collection, set `force_recreate` parameter to `True`.
+2026-08-01 15:54:42,752 - INFO - Response Time: 5.84 sec
+2026-08-01 16:02:03,205 - INFO - Question Received: Tell about sensationz dance academy
+2026-08-01 16:02:03,219 - INFO - Tool Used: PDF
+2026-08-01 16:02:09,407 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 16:02:12,708 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 16:02:12,796 - INFO - AFC is enabled with max remote calls: 10.
+2026-08-01 16:02:19,635 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-01 16:02:19,724 - INFO - Response Time: 16.48 sec
+2026-08-01 16:02:19,724 - INFO - Answer of question: Hello! Welcome to Sensationz Dance Academy.
+
+We offer a variety of dance styles including Bollywood, Semi-Classical, Hip-Hop, Freestyle, and Wedding Choreography. All our classes are conducted online through our official Sensationz App. You can attend live online classes and also access recorded sessions for practice and revision.
+
+We always suggest trying a free trial class first, which you can access from the "My Profile" section in the Sensationz App. New batches start regularly, and we have a special offer price of \u20b91,500 + GST currently.
+
+Do you have any preferred class timings, like morning, afternoon, or evening? I can share the upcoming batch schedule based on that.
+2026-08-01 16:02:25,613 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
+2026-08-01 17:05:12,172 - INFO - Question Received: hii
+2026-08-01 17:05:12,175 - INFO - Tool Used: PDF
+2026-08-01 17:05:19,770 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 17:05:20,537 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents "HTTP/1.1 200 OK"
+2026-08-01 17:05:20,550 - INFO - AFC is enabled with max remote calls: 10.
+2026-08-01 17:05:21,750 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-08-01 17:05:21,762 - INFO - Response Time: 9.58 sec
+2026-08-01 17:05:21,762 - INFO - Answer of question: Hello Ma'am/Sir! Welcome to Sensation Dance Academy. How may I help you today?
+2026-08-01 17:05:22,986 - INFO - HTTP Request: POST https://jmqdufgqnapsxcywjatq.supabase.co/rest/v1/chat_history "HTTP/2 201 Created"
