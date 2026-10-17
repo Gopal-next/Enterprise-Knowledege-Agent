@@ -1,4 +1,4 @@
-﻿import os
+import os
 import time
 from pathlib import Path
 from dotenv import load_dotenv
@@ -203,4 +203,7 @@ with gr.Blocks(title="Enterprise Knowledge Agent", css=custom_css) as demo:
             )
 
 if __name__ == "__main__":
-    demo.launch()
+    port = int(os.environ.get("PORT", 7860))
+    demo.launch(server_name="0.0.0.0", server_port=port)
+
+
