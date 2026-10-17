@@ -10,7 +10,6 @@ langchain-qdrant
 qdrant-client
 faiss-cpu
 pypdf
-sentence-transformers
 python-dotenv
 sqlalchemy
 supabase
