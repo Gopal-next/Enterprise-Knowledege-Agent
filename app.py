@@ -62,17 +62,17 @@ def respond(message, history, source, doc_option):
 
 def handle_pdf_upload(files):
     if not files:
-        return "No files selected.", f"Active Custom Documents: {len(custom_pdfs)}/2"
+        return "No files selected.", f"Active Custom Documents: {len(custom_pdfs)}/2", gr.update()
 
     if len(custom_pdfs) >= 2:
-        return "⚠️ **Limit Reached:** Maximum 2 PDFs already active. Click 'Reset PDFs' to upload new ones.", f"Active Custom Documents: {len(custom_pdfs)}/2"
+        return "⚠️ **Limit Reached:** Maximum 2 PDFs already active. Click 'Reset PDFs' to upload new ones.", f"Active Custom Documents: {len(custom_pdfs)}/2", gr.update()
 
     save_folder = PROJECT_ROOT / "Data" / "pdfs"
     save_folder.mkdir(parents=True, exist_ok=True)
 
     status_msgs = []
-    # Normalize files to list
     file_list = files if isinstance(files, list) else [files]
+    newly_indexed = []
 
     for file_obj in file_list:
         if len(custom_pdfs) >= 2:
@@ -91,17 +91,57 @@ def handle_pdf_upload(files):
         try:
             chunks = ingest_pdf(str(dest_path))
             custom_pdfs.append(file_name)
+            newly_indexed.append(file_name)
             status_msgs.append(f"✅ '{file_name}' indexed successfully ({chunks} chunks) into Qdrant Cloud!")
         except Exception as e:
             status_msgs.append(f"❌ Failed to index '{file_name}': {e}")
 
     active_summary = f"Active Custom Documents ({len(custom_pdfs)}/2): " + (", ".join([f"📄 {p}" for p in custom_pdfs]) if custom_pdfs else "None")
-    return "\n".join(status_msgs), active_summary
+
+    if newly_indexed:
+        chat_resume = [
+            {
+                "role": "assistant",
+                "content": f"🎉 **Chat Resumed!** Successfully indexed **{', '.join(newly_indexed)}** into Qdrant Cloud. You can now ask any question about your document below!"
+            }
+        ]
+    else:
+        chat_resume = gr.update()
+
+    return "\n".join(status_msgs), active_summary, chat_resume
 
 def reset_custom_pdfs():
     global custom_pdfs
     custom_pdfs = []
-    return "🔄 Custom PDFs cleared.", "Active Custom Documents: 0/2"
+    reset_chat = [
+        {
+            "role": "assistant",
+            "content": "🔄 **Custom PDFs cleared.** Please upload a new PDF in the panel above to resume chat, or switch to Pre-Existing Enterprise Data."
+        }
+    ]
+    return "🔄 Custom PDFs cleared.", "Active Custom Documents: 0/2", reset_chat
+
+def on_doc_option_change(option):
+    if "Upload Your Own" in option:
+        privacy_text = "📤 **Custom Document Mode:** Please upload your PDF below (max 2 allowed) to index into Qdrant Cloud. Chat will unlock as soon as your PDF is ready!"
+        if len(custom_pdfs) == 0:
+            chat_state = [
+                {
+                    "role": "assistant",
+                    "content": "🔒 **Upload your PDF to begin:** Upload your document in the panel above and click **'⚡ Index into Qdrant Cloud'**. Once indexed, chat will resume automatically!"
+                }
+            ]
+        else:
+            chat_state = [
+                {
+                    "role": "assistant",
+                    "content": f"📄 **Active Custom Documents ({len(custom_pdfs)}/2):** {', '.join(custom_pdfs)}. Ask any question about your document below!"
+                }
+            ]
+        return chat_state, privacy_text, gr.update(open=True)
+    else:
+        privacy_text = "🛡️ **Privacy Assured:** Currently querying pre-existing enterprise documents (Leave Policy & Employee Handbook). No personal files required."
+        return [], privacy_text, gr.update(open=False)
 
 custom_css = """
 .gradio-container { font-family: 'Inter', system-ui, sans-serif; }
@@ -110,14 +150,26 @@ custom_css = """
 """
 
 with gr.Blocks(title="Enterprise Knowledge Agent", css=custom_css) as demo:
-    with gr.Column():
-        gr.Markdown(
-            """
-            # 🏢 Enterprise Knowledge Agent
-            ### Dual-Engine Enterprise AI: Qdrant Cloud Vector Search (RAG) + Text-to-SQL
-            🟢 **Vector Store:** Qdrant Cloud Active &nbsp;|&nbsp; 🟢 **Observability:** LangSmith Live Tracing &nbsp;|&nbsp; 🟢 **Audit DB:** Supabase
-            """
-        )
+    with gr.Row():
+        with gr.Column(scale=8):
+            gr.Markdown(
+                """
+                # 🏢 Enterprise Knowledge Agent
+                ### Dual-Engine Enterprise AI: Qdrant Cloud Vector Search (RAG) + Text-to-SQL
+                🟢 **Vector Store:** Qdrant Cloud Active &nbsp;|&nbsp; 🟢 **Observability:** LangSmith Live Tracing &nbsp;|&nbsp; 🟢 **Audit DB:** Supabase
+                """
+            )
+        with gr.Column(scale=2, min_width=160):
+            gr.HTML(
+                """
+                <div style="display: flex; justify-content: flex-end; align-items: flex-start; padding-top: 14px;">
+                    <a href="https://github.com/Gopal-next/Enterprise-Knowledege-Agent" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #24292e; color: #ffffff; padding: 9px 16px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+                        <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                        GitHub Repo
+                    </a>
+                </div>
+                """
+            )
 
     with gr.Tabs():
         with gr.Tab("💬 Chat Assistant"):
@@ -143,7 +195,8 @@ with gr.Blocks(title="Enterprise Knowledge Agent", css=custom_css) as demo:
             )
 
             # Upload section (expandable/visible for custom uploads)
-            with gr.Accordion("📤 Upload Custom PDFs (Only needed for 'Upload Your Own' mode)", open=False):
+            upload_accordion = gr.Accordion("📤 Upload Custom PDFs (Only needed for 'Upload Your Own' mode)", open=False)
+            with upload_accordion:
                 file_upload = gr.File(label="Upload PDF(s)", file_types=[".pdf"], file_count="multiple")
                 with gr.Row():
                     upload_btn = gr.Button("⚡ Index into Qdrant Cloud", variant="primary")
@@ -151,10 +204,17 @@ with gr.Blocks(title="Enterprise Knowledge Agent", css=custom_css) as demo:
                 upload_status = gr.Markdown("No custom files uploaded yet.")
                 docs_count_status = gr.Markdown("Active Custom Documents: 0/2")
 
-                upload_btn.click(handle_pdf_upload, inputs=[file_upload], outputs=[upload_status, docs_count_status])
-                reset_btn.click(reset_custom_pdfs, outputs=[upload_status, docs_count_status])
-
             chatbot = gr.Chatbot(height=450)
+
+            upload_btn.click(handle_pdf_upload, inputs=[file_upload], outputs=[upload_status, docs_count_status, chatbot])
+            reset_btn.click(reset_custom_pdfs, outputs=[upload_status, docs_count_status, chatbot])
+
+            # Hook doc_option_radio to clear chat when custom mode is chosen
+            doc_option_radio.change(
+                on_doc_option_change,
+                inputs=[doc_option_radio],
+                outputs=[chatbot, privacy_info, upload_accordion]
+            )
 
             with gr.Row():
                 msg_input = gr.Textbox(
