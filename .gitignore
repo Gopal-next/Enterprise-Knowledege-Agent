@@ -7,4 +7,3 @@ just_note.txt
 # Ignore personal/confidential test PDFs
 *Resume*.pdf
 *marksheet*.pdf
-*main.py

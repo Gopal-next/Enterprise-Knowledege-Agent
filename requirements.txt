@@ -16,3 +16,5 @@ sqlalchemy
 supabase
 bm25s
 gradio
+pandas
+openpyxl
