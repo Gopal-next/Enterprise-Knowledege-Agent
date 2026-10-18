@@ -113,21 +113,22 @@ class AgentRouter:
 
         if engine == "GENERAL":
             answer = (
-                "👋 Hello! I am your **Enterprise Knowledge Agent** powered by Dual-Engine AI:\n\n"
-                "- 📄 **PDF Knowledge Base:** Ask about employee handbooks, leave policies, IT rules, or custom documents.\n"
-                "- 🗄️ **SQL Database:** Query employee records, salaries, departments, and headcount in plain English.\n\n"
-                "How can I assist you today?"
+                "Hello! I am your Enterprise Knowledge Assistant.\n\n"
+                "I can help you with:\n"
+                "- Company documents and policy questions (leave policy, handbooks, guidelines)\n"
+                "- Employee records and database information (departments, salaries, team counts)\n\n"
+                "What would you like to know?"
             )
             tool_name = "General Assistant"
 
         elif engine == "SQL_DB":
             answer = ask_database(question)
-            tool_name = "SQL Database (Autonomous)"
+            tool_name = "SQL Database"
 
         elif engine == "HYBRID":
             pdf_ans = retriever_qa(question)
             sql_ans = ask_database(question)
-            answer = f"### 📄 Company Policy Context:\n{pdf_ans}\n\n### 🗄️ Database Records:\n{sql_ans}"
+            answer = f"Company Policy Information:\n{pdf_ans}\n\nDatabase Records:\n{sql_ans}"
             tool_name = "Hybrid Multi-Engine"
             context_str = pdf_ans
 
