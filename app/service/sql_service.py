@@ -76,3 +76,46 @@ def ask_database(question: str) -> str:
         if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg or "quota" in err_msg.lower():
             return "Your Gemini quota has finished, please check back later."
         raise e
+
+
+def stream_ask_database(question: str):
+    """Streams synthesized natural language answer from database query execution."""
+    try:
+        db = get_database()
+        if isinstance(db, tuple):
+            db = db[0]
+
+        llm = ChatGoogleGenerativeAI(
+            model="gemini-2.5-flash"
+        )
+
+        chain = create_sql_query_chain(llm, db)
+        sql_query = chain.invoke({"question": question})
+
+        sql_query = re.sub(r"```(?:sql|sqlite)?", "", sql_query).strip()
+        if "SQLQuery:" in sql_query:
+            sql_query = sql_query.split("SQLQuery:")[-1].strip()
+
+        executor = QuerySQLDatabaseTool(db=db)
+        result = executor.invoke(sql_query)
+
+        synthesis_prompt = f"""
+        You are a helpful business data analyst.
+        Synthesize a clean, natural, customer-friendly answer.
+        User Question: {question}
+        SQL Query: {sql_query}
+        Database Result: {result}
+        Answer:
+        """
+
+        for chunk in llm.stream(synthesis_prompt):
+            if chunk.content:
+                yield chunk.content
+
+        yield f"\n\n---\n*Executed SQL:* `{sql_query}`"
+    except Exception as e:
+        err_msg = str(e)
+        if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg or "quota" in err_msg.lower():
+            yield "Your Gemini quota has finished, please check back later."
+        else:
+            yield f"⚠️ Database error: {err_msg}"

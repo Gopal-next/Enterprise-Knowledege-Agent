@@ -24,16 +24,18 @@ def _get_client():
         print(f"Warning: Supabase init failed: {e}")
         return None
 
-def save_chat(question, answer, tool_used, response_time):
+def save_chat(question, answer, tool_used, response_time, cached=False, evaluation=None):
     client = _get_client()
     if client is None:
-        print("Supabase not configured – skipping chat log.")
         return None
+
+    # Tag cached in tool_used for clear auditing
+    actual_tool = f"{tool_used} ⚡(Cached)" if cached else tool_used
 
     data = {
         "question": question,
         "answer": answer,
-        "tool_used": tool_used,
+        "tool_used": actual_tool,
         "response_time": response_time,
         "created_at": datetime.now().isoformat()
     }

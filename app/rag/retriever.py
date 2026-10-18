@@ -27,13 +27,15 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 load_dotenv(PROJECT_ROOT / ".env", override=True)
 os.environ["LANGSMITH_DISABLE_RUN_COMPRESSION"] = "true"
 
+from app.rag.hybrid_retriever import global_hybrid_retriever
+
 PDF_FOLDER = PROJECT_ROOT / "Data" / "pdfs"
 
 
 def ingest_pdf(file_path: str) -> int:
     """
-    Ingests a single PDF file into the persistent FAISS vector store.
-    Returns the number of chunks indexed.
+    Ingests a single PDF file into the persistent vector store (Qdrant/FAISS)
+    and synchronizes in-memory BM25 index for hybrid retrieval.
     """
     docs = load_pdf(str(file_path))
     if not docs:
@@ -41,13 +43,14 @@ def ingest_pdf(file_path: str) -> int:
 
     chunks = split_documents(docs)
     add_documents_to_vectorstore(chunks)
+    global_hybrid_retriever.sync_corpus(chunks)
     return len(chunks)
 
 
 def ingest_all_pdfs(folder_path: str = None) -> int:
     """
     Scans the given folder (default: Data/pdfs) and ingests all PDFs
-    into the persistent vector store. Returns total chunk count.
+    into persistent vector store and BM25 index.
     """
     target_folder = Path(folder_path) if folder_path else PDF_FOLDER
     if not target_folder.exists():
@@ -65,69 +68,104 @@ def ingest_all_pdfs(folder_path: str = None) -> int:
 
     chunks = split_documents(all_docs)
     add_documents_to_vectorstore(chunks)
+    global_hybrid_retriever.sync_corpus(chunks)
     return len(chunks)
+
+
+def _get_relevant_documents(query: str):
+    """Retrieve top-k documents using Hybrid Search (Qdrant Dense + BM25 Sparse RRF)."""
+    vectorstore = get_existing_vectorstore()
+    if vectorstore is None:
+        count = ingest_all_pdfs()
+        if count == 0:
+            return []
+        vectorstore = get_existing_vectorstore()
+
+    return global_hybrid_retriever.retrieve(query, vectorstore=vectorstore, top_k=4)
+
+
+def get_retriever_context(query: str) -> str:
+    """Retrieve and format context documents for auditing and evaluation."""
+    docs = _get_relevant_documents(query)
+    return "\n\n".join(doc.page_content for doc in docs)
+
+
+SYSTEM_RAG_PROMPT = """
+You are an intelligent Enterprise Knowledge AI Assistant.
+Your primary responsibility is to answer user questions accurately using the provided context from company documents.
+
+Guidelines:
+1. Base your answer primarily on the provided context.
+2. If the context does not fully answer the question, provide helpful general guidance while clearly distinguishing it from company-specific facts.
+3. Never invent company policies, pricing, dates, or numbers not present in the context.
+4. Keep answers clear, conversational, and professional.
+5. If the user asks in another language (e.g. Hindi), answer naturally in that respective language.
+6. Do not explicitly say "according to the retrieved context". Answer naturally as a knowledgeable assistant.
+
+Company Context:
+{context}
+"""
 
 
 def retriever_qa(query: str) -> str:
     """
-    Queries the persistent vector store and generates an answer via Gemini.
-    Uses modern LCEL for native, end-to-end LangSmith observability.
+    Queries the persistent vector store using Hybrid Search and generates
+    an answer via Gemini with end-to-end LangSmith observability.
     """
-    vectorstore = get_existing_vectorstore()
-
-    # Graceful fallback: If vector store doesn't exist yet, auto-ingest existing PDFs once
-    if vectorstore is None:
-        count = ingest_all_pdfs()
-        if count == 0:
-            return "No documents have been indexed yet. Please upload a PDF file first."
-        vectorstore = get_existing_vectorstore()
-
-    retriever_obj = vectorstore.as_retriever(
-        search_kwargs={"k": 4}
-    )
+    context = get_retriever_context(query)
+    if not context:
+        return "No relevant company documents found to answer this question. Please upload a PDF first."
 
     llm = ChatGoogleGenerativeAI(
-        model="gemini-3.5-flash"
+        model="gemini-2.5-flash"
     )
 
-    system_prompt = """
-        You are an intelligent Enterprise Knowledge AI Assistant.
-
-        Your primary responsibility is to answer user questions accurately using the provided context from company documents.
-
-        Guidelines:
-        1. Base your answer primarily on the provided context.
-        2. If the context does not fully answer the question, provide helpful general guidance while clearly distinguishing it from company-specific facts.
-        3. Never invent company policies, pricing, dates, or numbers not present in the context.
-        4. Keep answers clear, conversational, and professional.
-        5. If the user asks in another language (e.g. Hindi), answer naturally in that respective language.
-        6. Do not explicitly say "according to the retrieved context". Answer naturally as a knowledgeable assistant.
-
-        Company Context:
-        {context}
-    """
-
     prompt = ChatPromptTemplate.from_messages([
-        ("system", system_prompt),
+        ("system", SYSTEM_RAG_PROMPT),
         ("human", "{question}")
     ])
 
-    def format_docs(docs):
-        return "\n\n".join(doc.page_content for doc in docs)
-
-    # LCEL pipeline: natively traces retriever, prompt, model, and output to LangSmith
-    rag_chain = (
-        {"context": retriever_obj | format_docs, "question": RunnablePassthrough()}
-        | prompt
-        | llm
-        | StrOutputParser()
-    )
+    rag_chain = prompt | llm | StrOutputParser()
 
     try:
-        response = rag_chain.invoke(query)
+        response = rag_chain.invoke({"context": context, "question": query})
         return response
     except Exception as e:
         err_msg = str(e)
         if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg or "quota" in err_msg.lower():
             return "Your Gemini quota has finished, please check back later."
         raise e
+
+
+def stream_retriever_qa(query: str):
+    """
+    Generator that streams LLM tokens in real-time chunk-by-chunk
+    using Gemini streaming API (Server-Sent Events pattern).
+    """
+    context = get_retriever_context(query)
+    if not context:
+        yield "No relevant company documents found to answer this question. Please upload a PDF first."
+        return
+
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-2.5-flash"
+    )
+
+    prompt = ChatPromptTemplate.from_messages([
+        ("system", SYSTEM_RAG_PROMPT),
+        ("human", "{question}")
+    ])
+
+    formatted = prompt.format_messages(context=context, question=query)
+
+    try:
+        for chunk in llm.stream(formatted):
+            token = chunk.content
+            if token:
+                yield token
+    except Exception as e:
+        err_msg = str(e)
+        if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg or "quota" in err_msg.lower():
+            yield "Your Gemini quota has finished, please check back later."
+        else:
+            yield f"\n\n⚠️ Error during streaming: {err_msg}"
