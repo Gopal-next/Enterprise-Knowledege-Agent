@@ -122,20 +122,24 @@ FEATURE 2: AUTONOMOUS AGENTIC TOOL ROUTING (ReAct Pattern)
   - Unifies unstructured vector search with structured relational data in a single conversational bar.
 
 --------------------------------------------------------------------------------
-FEATURE 3: IN-MEMORY LRU CACHE WITH TTL & COST OPTIMIZATION
+--------------------------------------------------------------------------------
+FEATURE 3: UPSTASH SERVERLESS REDIS CACHE (Distributed, Persistent, TTL)
 --------------------------------------------------------------------------------
 - PROBLEM IT SOLVES:
   In enterprise settings, 50-70% of employee questions are identical (e.g. "What is the 
   holiday schedule?", "What is paternity leave?", "What is the medical insurance policy?").
   Repeatedly running vector similarity and calling Gemini for the same question wastes API dollars
-  and stresses rate limits.
+  and stresses rate limits. Standard in-memory caches also wipe out when containers restart or scale.
 - HOW WE IMPLEMENTED IT:
-  - Built thread-safe `QueryCache` (`app/core/cache.py`) using an `OrderedDict` with LRU eviction.
+  - Integrated Upstash Serverless Cloud Redis over HTTPS REST API (`upstash-redis`).
+  - Native Redis TTL expiration (`ex=3600`, 1 hour) handles cache invalidation automatically.
   - Normalizes input queries (stripping punctuation, casing, extra whitespace) to maximize hit rate.
-  - Configurable TTL (Time-To-Live = 1 hour) prevents serving stale data when documents update.
+  - Dual-tier fallback: If network or credentials are absent, automatically falls back to 
+    an in-memory thread-safe LRU cache with zero downtime.
   - Telemetry tracking: tracks hit rate (%), total hits, total misses, and cumulative latency saved.
 - SYSTEM DESIGN IMPACT:
-  - Cached query latency: <5 milliseconds (vs 1.8 seconds via LLM).
+  - Cache persists across server redeployments and is shared across multiple concurrent workers.
+  - Cached query latency: <25 milliseconds (vs 1.8 seconds via LLM).
   - API Token Savings: 100% cost reduction on cached hits.
   - Includes UI telemetry dashboard with a "Clear Cache" flush trigger.
 

@@ -17,3 +17,4 @@ bm25s
 gradio
 pandas
 openpyxl
+upstash-redis
