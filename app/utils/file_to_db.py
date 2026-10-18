@@ -8,6 +8,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 def create_temp_db():
     candidate_folders = [
+        PROJECT_ROOT / "Data" / "excel file",
         PROJECT_ROOT / "Data" / "excelfile",
         PROJECT_ROOT / "app" / "data" / "excelfile",
         PROJECT_ROOT / "data" / "excelfile",

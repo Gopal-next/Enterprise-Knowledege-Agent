@@ -33,6 +33,7 @@ def get_qdrant_client():
         return QdrantClient(
             url=os.getenv("QDRANT_URL", "").strip(),
             api_key=os.getenv("QDRANT_API_KEY", "").strip(),
+            timeout=60.0,
         )
     except Exception as e:
         print(f"Warning: Failed to initialize QdrantClient: {e}")
@@ -107,7 +108,7 @@ def get_existing_vectorstore(embedding_model=None):
     return None
 
 
-def add_documents_to_vectorstore(chunks, embedding_model=None, batch_size=20):
+def add_documents_to_vectorstore(chunks, embedding_model=None, batch_size=10):
     """
     Adds document chunks directly to Qdrant Cloud (or FAISS if Qdrant not available).
     Includes rate-limit retry and batching.
@@ -132,7 +133,7 @@ def add_documents_to_vectorstore(chunks, embedding_model=None, batch_size=20):
                 end_idx = min(start_idx + batch_size, total_chunks)
                 batch = chunks[start_idx:end_idx]
 
-                max_retries = 4
+                max_retries = 5
                 retry_delay = 15.0
 
                 for attempt in range(max_retries):
@@ -142,8 +143,9 @@ def add_documents_to_vectorstore(chunks, embedding_model=None, batch_size=20):
                         break
                     except Exception as e:
                         err_str = str(e).lower()
-                        if "429" in err_str or "quota" in err_str or "resource_exhausted" in err_str:
-                            print(f"Rate limit on batch {batch_idx + 1}. Waiting {retry_delay:.0f}s before retry (attempt {attempt + 1}/{max_retries})...")
+                        retriable = any(k in err_str for k in ["429", "quota", "resource_exhausted", "timeout", "timed out", "responsehandlingexception", "transport"])
+                        if retriable:
+                            print(f"Network delay or rate limit on batch {batch_idx + 1}. Waiting {retry_delay:.0f}s before retry (attempt {attempt + 1}/{max_retries})...")
                             time.sleep(retry_delay)
                             retry_delay *= 1.5
                         else:
@@ -152,7 +154,7 @@ def add_documents_to_vectorstore(chunks, embedding_model=None, batch_size=20):
                     raise RuntimeError(f"Failed to ingest batch {batch_idx + 1} to Qdrant after {max_retries} retries.")
 
                 if batch_idx < total_batches - 1:
-                    time.sleep(1.0)
+                    time.sleep(1.5)
 
             return qstore
 

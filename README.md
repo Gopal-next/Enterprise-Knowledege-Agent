@@ -1,14 +1,3 @@
----
-title: Enterprise Knowledge Agent
-emoji: 🏢
-colorFrom: indigo
-colorTo: purple
-sdk: gradio
-sdk_version: 6.16.0
-app_file: app.py
-pinned: false
----
-
 # Enterprise Knowledge Agent
 
 ## Overview
@@ -155,11 +144,7 @@ Add screenshots here after implementation:
 
 ### Chat Assistant
 
-![Chat Assistant](Images\chat.png)
-
-### Analytics Dashboard
-
-![Analytics Dashboard](Images\analytics.png)
+![Chat Assistant](https://enterprise-knowledege-agent.onrender.com/?)
 
 ---
 

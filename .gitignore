@@ -3,8 +3,21 @@ venv/
 .venv/
 __pycache__/
 *.pyc
+*.log
 just_note.txt
+main.py
+
 # Ignore personal/confidential test PDFs
 *Resume*.pdf
 *marksheet*.pdf
-main.py
+
+# Local SQLite databases
+*.db
+Data/excelfile/temp.db
+Data/excel file/temp.db
+
+# Keep interview preparation and architecture guides strictly local
+INTERVIEW_GUIDE_AND_ARCHITECTURE.txt
+BASIC_DEFINITIONS_AND_CONCEPTS_100_QA.md
+INTERVIEW_PROBLEM_SOLVING_AND_CROSS_EXAM_100_QA.md
+CODING_TEMPLATES_AND_PATTERNS_100_EXAMPLES.md
