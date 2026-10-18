@@ -270,19 +270,28 @@ def on_doc_option_change(option):
 
 
 def get_cache_telemetry_markdown():
-    """Format live in-memory cache statistics for the UI telemetry dashboard."""
+    """Format live cache statistics for the UI telemetry dashboard."""
     stats = global_cache.get_stats()
+    backend = stats.get("backend", "Upstash Cloud Redis")
+    hit_rate = stats.get("hit_rate_pct", 0.0)
+    hits = stats.get("hits", 0)
+    misses = stats.get("misses", 0)
+    total_q = stats.get("total_queries", 0)
+    saved_sec = stats.get("saved_latency_sec", 0.0)
+    ttl = stats.get("ttl_seconds", 3600)
+
     return f"""
     ### 📊 Live System Cache & Latency Telemetry
 
     | Metric | Value | Description |
     |---|---|---|
-    | **Cache Hit Rate** | **{stats['hit_rate_pct']}%** | Percentage of queries resolved without calling LLM |
-    | **Total Hits** | **{stats['hits']}** | Ultra-fast (<5ms) sub-second cached responses |
-    | **Total Misses** | **{stats['misses']}** | Queries forwarded to Gemini LLM & Qdrant |
-    | **Total Queries** | **{stats['total_queries']}** | Aggregate user queries in current session |
-    | **Saved Latency** | **{stats['saved_latency_sec']}s** | Estimated cumulative roundtrip API time saved |
-    | **Active Cache Entries** | **{stats['cached_entries']} / {stats['max_size']}** | In-memory LRU slots currently utilized |
+    | **Active Engine** | **{backend}** | Distributed Serverless Caching Layer |
+    | **Cache Hit Rate** | **{hit_rate}%** | Percentage of queries resolved without calling LLM |
+    | **Total Hits** | **{hits}** | Ultra-fast (<25ms) cached responses served |
+    | **Total Misses** | **{misses}** | Queries forwarded to Gemini LLM & Qdrant |
+    | **Total Queries** | **{total_q}** | Aggregate user queries in current session |
+    | **Saved Latency** | **{saved_sec}s** | Cumulative API roundtrip time saved |
+    | **TTL Window** | **{ttl}s** | Automatic cache expiration window |
     """
 
 

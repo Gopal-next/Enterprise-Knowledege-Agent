@@ -163,7 +163,9 @@ class UnifiedCache:
                 "total_queries": total,
                 "hit_rate_pct": round(hit_rate, 1),
                 "saved_latency_sec": round(self.total_saved_ms / 1000.0, 2),
-                "ttl_seconds": self.default_ttl
+                "ttl_seconds": self.default_ttl,
+                "cached_entries": len(self._local_cache),
+                "max_size": 256
             }
 
     def clear(self):
